@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Votic people</title>
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100;200;300;400&family=Russo+One&family=Six+Caps&display=swap" rel="stylesheet">
+    <link rel="icon" href="../media/head_icon.png">
+
+    <script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname === this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function() {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+    </script>
+
+</head>
+<body>
+
+
+<input type="checkbox" id = "expand-toggle">
+
+<ul id = "menu" style="">
+
+    <li><a href = "history.html">History</a></li>
+    <li><a href = "settlements.html">Settlements</a></li>
+    <li><a href = "culture.html">Culture</a></li>
+    <li><a href="contact-us.html" id = "mobile-add">Information</a></li>
+    <li id = "mobile-lang"><a href="../ru/history.html">RU</a></li>
+    <label for="expand-toggle" id = "menu-closer">
+        &#10799;
+    </label>
+</ul>
+
+
+
+<header>
+    <div class="logo_wrapper">
+        <a href = "index.html">
+            <img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Votic_Flag.svg/1280px-Votic_Flag.svg.png" class="img_logo" alt="west2eats logo1" id = "img_logo1">
+            <h1 id="text_logo">Vađđa<br>today</h1>
+        </a>
+    </div>
+
+
+    <ul class = "topMenuBar">
+        <li><a href = "history.html">History</a></li>
+        <li><a href = "settlements.html">Settlements</a></li>
+        <li><a href = "culture.html">Culture</a></li>
+        <li id = "li_main_menu_add_info"><a id = "div_main_menu_add_text" href="contact-us.html">Information</a></li>
+        <li class="en-menu-open">
+            <label for="expand-toggle" id = "menu-opener">menu
+            </label>
+        </li>
+    </ul>
+
+
+
+
+    <ul class = "changeLanguage">
+        <li class = "li_language"><a id = "lang1" href="../ru/history.html">RU</a></li>
+        <li class = "li_language"><a id = "lang2">EN</a></li>
+    </ul>
+</header>
+
+<main id = "history-main">
+
+    <section class="main-photo">
+        <img class="img_main_home_pic" src="../media/old_map.jpeg" alt="People pic">
+        <div>
+            <h2 class="h2_main_pic_main_text">The Votic history</h2><h2 class="h2_main_pic_main_text" id = "preamble">From ancient chronicles to present day</h2>
+            <div id = "dest"></div>
+            <a id="a_main_home_pic_link" href="#dest">Read more</a>
+        </div>
+    </section>
+
+
+
+    <section class = "single-content section-header">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                The history of Votes
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Overview of the main events in the Votic history
+            </p>
+        </header>
+    </section>
+
+
+    <section class = "intermediate"  id="aside-history1">
+        <aside class = "int-aside"></aside>
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Did you know?</h1>
+            <h2 class = "int-fact">Votes are considered the oldest indigenous people of Leningrad region
+                <br>the earliest discovered Votic burials date back to the I-IV centuries A.D.</h2>
+        </main>
+    </section>
+
+
+
+
+    <section class = "section-single-main-text section-article-text">
+
+        <aside class = "aside-article">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    The main briefly
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        The earliest evidence of the votian culture dates back to the I-IV centuries A.D.
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        To the XII century, Vađđa seeks to be exempted from the intentions of Novgorod to extend her tribute
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Since the 12th century, the votians have been fighting hand in hand with the Novgorod citizens, as in 1149 against the Jäämit tribe
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+        <article class="article-single">
+            <h1 class = "single-text-header-article">Early history</h1>
+            <p class = "single-text-article">
+                Vađđa is the oldest known tribe of the North-West of the Leningrad region.
+                For a long time it was believed that Votes appeared on these lands only at the end of the first Millennium A.D.
+                and the roots of this people lie in Estonia.
+            </p>
+            <p class="single-text-article">
+                However, according to the latest archaeological data, the earliest discovered Vodic burials date back to the I-IV centuries A.D.
+                On stone burial platforms located near the villages of Valgovitsy and Velikino,
+                various household items of the ancestors of modern Votes were found: iron and bronze bracelets, breast pins, a Celt axe, fragments of a scythe-pink salmon and fragments of ceramics.
+            </p>
+            <p class = "single-text-article">
+                There are not many chronicles describing Votes left.
+                Since the Votic people lived on the outskirts of Novgorod possessions,
+                the chronicles mostly mark only the most significant events: disasters, wars, etc.
+                According to them, one can understand only some aspects of the life of medieval Votes.
+                Very often Vađđa is mentioned in the description of the military conflicts that affect the interests of Ancient Novgorod.
+
+            </p>
+            <p class="single-text-article">
+                For instance, the Novgorod first chronicle reports,
+                that on October 23, 1069, when the Novgorodians won a victory over Prince Vseslav of Polotsk, on whose side the Votes came out.
+                In this message, historians see the desire of vodi to free itself from the intention of Novgorod to extend tribute to it.
+            </p>
+            <p class="single-text-article">
+                In 1149, Votes with the help of 500 Novgorodians, exterminated 1000 people from the Finnish Yem (Jäämit) tribe who attacked them.
+                It should be noted that, despite the mutual assistance of Novgorodians and Votians,
+                the increasing power of Novgorod over Vađđa  was quite severe.
+                After the German attack on Votes in 1240 and their founding of the "city in Koporye Pogost"
+                Alexander Nevsky took Koporye fortification a year later.
+                Traitors from Votes and Chud were hanged by order of the Prince,
+                and some of the captured Germans were released.
+            </p>
+
+        </article>
+
+        <div class = "main-img-wrapper article-img-single">
+            <div class = "main-img">
+                <img src="../media/fortress.jpeg" style="height: 100%; width: 100%">
+            </div>
+            <div class = "main-img-label">
+                <a href="https://en.wikipedia.org/wiki/Koporye">
+                    <h4>Koporye Fortress</h4>
+                </a>
+            </div>
+        </div>
+
+
+        <aside class = "aside-article invisible">
+        </aside>
+
+        <article class="article-single">
+            <p class="single-text-article">
+                By the XIII century, the inclusion of the land of Votes in the Novgorod possessions was completed.
+                In the Charter of Prince Yaroslav (1260s) was first named among the 9 main districts of Novgorod
+                of the earth "Votic Sotnya".
+                In 1270 and 1316, the Votes fought together with the Novgorodians — this time against the princes they did not like.
+            </p>
+
+            <h1 class = "single-text-header-article">
+                As a part of Russia
+            </h1>
+            <p class="single-text-article">
+                In 1478, when Novgorod was conquered by Ivan III and all Novgorod's possessions were divided into pyatinas,
+                one of the pyatinas was called Votic,
+                although its borders went far beyond the boundaries of the ancient Votic land, even capturing Karelia.
+            </p>
+            <p class="single-text-article">
+                The transition to the rule of Novgorod had the consequence of the adoption of Christianity in the form of Orthodoxy by the Votians.
+                In the XIII century Votic Pyatina was already a stable part of the Novgorod Republic,
+                and the Votic militia is part of the Novgorod one.
+            </p>
+            <p class="single-text-article">
+                Written sources do not give an exact localization of the settlement of Votes.
+                The first sources of this kind are scribal books,
+                compiled after the annexation of Novgorod to Moscow (for example, the Scribe book of Dmitry Kitaev's Votic Pyatina, 7008);
+                however, these books were compiled after the redistribution of Novgorod lands by the Moscow authorities
+                and may not correspond to the naturally occurring way of life.
+            </p>
+            <p class="single-text-article">
+                According to many researchers, the medieval Votians were spread between the Luga and Izhora lands,
+                and in the West it approached the Luga river, except for the actual river bank.
+                Apparently,the sea coast from the mouth of the Luga to the Sista river was not part of the Votic Pyatina,
+                where medieval sources place Chud.
+            </p>
+            <p class="single-text-article">
+                The assimilation of Votes by the Slavic people (who migrated to the area of its settlement from the South)
+                and Izhora (who migrated from the North-East) population led to a reduction in its number.
+                In 1444-1447, the Livonian knights kidnapped a significant group of Votes near Bausk (modern Latvia),
+                where the descendants of the settlers remained as a separate ethnic group called the Krevings until the middle of the XIX century.
+            </p>
+
+        </article>
+
+
+        <div class = "main-img-wrapper article-img-double">
+
+
+            <div class = "main-img-wrapper article-img-left">
+                <div class = "main-img">
+                    <img src="../media/castle.jpg" style="height: 100%; width: 100%">
+                </div>
+                <div class = "main-img-label-left"><a href="https://en.wikipedia.org/wiki/Bauska_Castle">
+                    <h4>Bauska Castle</h4></a>
+                </div>
+            </div>
+
+            <div class = "main-img-wrapper article-img-right">
+                <div class = "main-img">
+                    <img src="../media/luga.jpg" style="height: 100%; width: 100%">
+                </div>
+                <div class = "main-img-label-right"><a href="https://en.wikipedia.org/wiki/Luga_(river)">
+                    <h4>Luga river</h4></a>
+                </div>
+            </div>
+        </div>
+
+        <aside class = "aside-article invisible">
+        </aside>
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                Transfer of settlement areas of Votes in 1617 under the terms of the Stolbovsky Peace under the rule of Sweden
+                caused a massive outflow of the local population to Russia
+                (when these lands returned to Russia after the end of the Northern war, some of the settlers returned).
+            </p>
+
+        </article>
+
+
+        <aside class = "aside-article" id="new-history-aside">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    The main briefly
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        At the time of 1926, the census recorded 705 vodi representatives.
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        In November 1943, the Votic evacuation to Estonia, the city of Paldiski, and then to Finland began
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        After signing a peace Treaty with Finland, most of the Votes returned to the USSR, but were forcibly resettled in the country
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+        <article class="article-single" >
+            <h1 class = "single-text-header-article">Modern history</h1>
+            <p class = "single-text-article">
+                In the XIX century, the number of the Votic people was rapidly decreasing.
+                As previously noted, the first census of 1897 names 36 native speakers of the Votic language and 303 — Chud language.
+                But this is clearly a mistake as in 1919 the Finnish literature it was reported about 1000 Votians.
+            </p>
+            <p class="single-text-article">
+                The 1926 census recorded 705 Votic representatives, though, apparently, these numbers are underestimated
+                The Votic population also declined in the 1930s and 1932, and although accurate data are not yet available,
+                however, there is evidence that part of Votes who lived in the area of Kotly on fertile land that gave excellent harvests,
+                was subjected to forced relocation due to collectivization.
+            </p>
+            <p class = "single-text-article">
+                The Great Patriotic war brought even greater losses.
+                In the minutes of the meeting of the Germans and Finns in Tallinn on November 4, 1943
+                the issue of evacuation to Finland along with Finns and Izhors was also discussed separately.
+                In the same month, the evacuation of local Finno-speaking peoples began, first to Estonia,
+                to the city of Paldiski (in Soviet times – Baltiysk), and then to Finland.
+            </p>
+            <p class="single-text-article">
+                After the signing of the peace Treaty with Finland most of the evacuated Votes returned to the USSR in 1944,
+                but immediately it was, like Izhora and Ingermanland Finns, forcibly evicted to Pskov,
+                Novgorod, Velikiye Luki regions, then to Karelia and Siberia.
+            </p>
+            <p class="single-text-article">
+                In 1956, only about 25 elderly people were met,
+                who could speak the Votic language fluently.
+                In the 1959 census, Vađđa is not mentioned.
+            </p>
+
+
+
+
+            <h1 class = "single-text-header-article">Vađđa in Russian Federation</h1>
+
+            <p class="single-text-article">
+                Today, Vađđa is the smallest people in the Leningrad region and is recognized as the disappearing people of Russia.
+                According to the latest census, there are only 64 votes left.
+                Most of them live in the Leningrad region — the villages of Luzhitsy, Kotly and Krakolye in Ust-Luga and Sosnovy Bor.
+                There are also Votians in St. Petersburg and Estonia.
+                Votic activists and other volunteers work on the preservation of the Votic culture.
+            </p>
+
+            <p class="single-text-article">
+                In 1997, the first Votic Museum was established in the village of Luzhitsy.
+                70 exhibits were collected in the Museum by T. Efimova and other villagers
+                as well as more than 200 photos of the pre-war period. The Museum started collecting ethnographic material,
+                collecting and structuring the information from various archives, including information on the genealogy of Votic families, etc.
+                Since 2000, an annual holiday is held in the village of Luzica "Luutsa vakkavõ" - "Luzica fold".
+            </p>
+
+            <p class="single-text-article">
+                On October 13, 2008 by the Decree of the government of the Russian Federation "On amendments to the unified list of small indigenous peoples of the Russian Federation"
+                Vađđa is included in the Unified list of small indigenous peoples of the Russian Federation.
+            </p>
+
+        </article>
+
+
+    </section>
+
+
+    <section class = "intermediate int2" id = "int-history-final">
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Did you know?</h1>
+            <h2 class = "int-fact">Vađđa is considered the smallest people living in Russia:<br>
+                According to the 2010 census there are 64 Votes living in Russia, and 9 in Estonia
+            </h2>
+        </main>
+
+        <aside class = "int-aside"></aside>
+    </section>
+
+    <section class = "single-content useful-links-article">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Further reading
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Sources of material for this article and other useful resources
+            </p>
+        </header>
+
+
+
+
+        <main class="section-single-main-text">
+            <h1 class = "single-text-header">The article's materials</h1>
+            <p class = "single-text">
+                <a href="http://vatland.ru">The new Votic site</a><br>historical facts and details
+            </p>
+            <p class = "single-text">
+                <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B4%D1%8C">Votes on wikipedia</a><br>brief historical introduction
+            </p>
+            <p class="single-text">
+                <a href="https://kmn-lo.ru/vod">
+                    Votes on the Indigenous Leningrad region peoples' portal</a><br>Article upon the Votic history
+            </p>
+
+
+
+            <h1 class = "single-text-header">
+                See also
+            </h1>
+            <p class="single-text">
+                <a href="http://vatland.ru/history/">Votic history on the new Votic site:</a>
+                <br>History of study, Luzhitsy village history, etc.
+            </p>
+            <p class="single-text">
+                <a href="https://www.culture.ru/materials/50925/ischezayushie-narody-rossii-vod">Votes on CULTURE.RU site</a>
+                <br>Article upon Votes
+            </p>
+
+        </main>
+
+
+
+    </section>
+
+
+    <section style="height: 20px">
+
+    </section>
+
+</main>
+
+<footer class="the-footer">
+    <p class = "footer_desc">Vađđa<span> </span>today, <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>, 2020</p>
+</footer>
+
+</body>
+</html>

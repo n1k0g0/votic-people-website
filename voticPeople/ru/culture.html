@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Народ Водь</title>
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100;200;300;400&family=Russo+One&family=Six+Caps&display=swap" rel="stylesheet">
+    <link rel="icon" href="../media/head_icon.png">
+
+    <script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname === this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function() {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+    </script>
+</head>
+<body>
+
+
+<input type="checkbox" id = "expand-toggle">
+
+<ul id = "menu" style="">
+
+    <li><a href = "history.html">История</a></li>
+    <li><a href = "settlements.html">Поселения</a></li>
+    <li><a href = "culture.html">Культура</a></li>
+    <li><a href="contact-us.html" id = "mobile-add">Дополнительно</a></li>
+    <li id = "mobile-lang"><a href="../en/culture.html">EN</a></li>
+    <label for="expand-toggle" id = "menu-closer">
+        &#10799;
+    </label>
+</ul>
+
+
+
+<header>
+    <div class="logo_wrapper">
+        <a href = "../index.html">
+            <img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Votic_Flag.svg/1280px-Votic_Flag.svg.png" class="img_logo" alt="west2eats logo1" id = "img_logo1">
+            <h1 id="text_logo">Вадьякко<br>сегодня</h1>
+        </a>
+    </div>
+
+    <ul class = "topMenuBar">
+        <li><a href = "history.html">История</a></li>
+        <li><a href = "settlements.html">Поселения</a></li>
+        <li><a href = "culture.html">Культура</a></li>
+        <li id = "li_main_menu_add_info"><a id = "div_main_menu_add_text" href="contact-us.html">Дополнительно</a></li>
+        <li>
+            <label for="expand-toggle" id = "menu-opener">меню
+            </label>
+        </li>
+
+    </ul>
+
+
+
+    <ul class = "changeLanguage">
+        <li class = "li_language"><a id = "lang1" href="../en/culture.html">EN</a></li>
+        <li class = "li_language"><a id = "lang2">RU</a></li>
+    </ul>
+</header>
+
+<main id = "culture-main">
+
+    <section class="main-photo">
+        <img class="img_main_home_pic" src="../media/home_pic0.jpeg" alt="Img for Culture">
+        <h2 class="h2_main_pic_main_text">Культура води</h2><h2 class="h2_main_pic_main_text" id = "preamble">Язык, традиции и многое другое</h2>
+        <div id = "dest"></div>
+        <a id="a_main_home_pic_link" href="#dest">Читать далее</a>
+    </section>
+
+
+    <section class = "single-content section-header">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Портрет народа
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Внешность, характер и основные занятия вожан
+            </p>
+        </header>
+    </section>
+
+
+
+    <section class = "intermediate int2 no-marg">
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header shortened">Рекомендуем к<span style="white-space: nowrap"> </span>прочтению</h1>
+            <h2 class = "int-fact">Приведенная ниже статья во многом опирается на портал коренных народов Ленобласти.<br>
+                Ознакомиться c оригинальным текстом Вы можете по адресу: <a href="https://kmn-lo.ru/vod">https://kmn-lo.ru/vod</a>
+            </h2>
+        </main>
+
+        <aside class = "int-aside"></aside>
+    </section>
+
+
+
+    <section class = "section-single-main-text section-article-text">
+
+
+
+
+
+        <aside class = "aside-article invisible"> </aside>
+
+
+        <article class="article-single">
+            <h1 class = "single-text-header-article">Внешний облик и характер</h1>
+
+            <p class = "single-text-article">
+                Вожане, наряду с другими прибалто-финскими народами, принадлежат к восточно-прибалтийскому типу.
+
+            </p>
+            <p class="single-text-article">
+                К отличительным особенностям води относят исключительную светловолосость:
+                у 80% мужчин и у 76% женщин волосы "были либо белыми как снег, либо были золотисто-жёлтыми как песок".
+            </p>
+
+
+
+        </article>
+
+
+        <div class = "main-img-wrapper article-img-single">
+            <div class = "main-img">
+
+                <img src="../media/people-today.jpeg" style="width:100%; height:100%" alt="votes today">
+            </div>
+            <div class = "main-img-label" style="width: 270px"><a href="https://www.culture.ru/materials/50925/ischezayushie-narody-rossii-vod">
+                <h4>вожане сегодня</h4></a></div>
+        </div>
+
+
+        <aside class = "aside-article invisible"></aside>
+
+        <article class="article-single"  style="margin-top: 0">
+
+
+            <p class = "single-text-article">
+                В этнографической литературе водским женщинам часто приписывают необычайно красивую внешность, а также весёлый и приятный характер.
+            </p>
+
+
+
+
+            <p class="single-text-article">
+                В конце XVIII века известный российский исследователь Фёдор Туманский писал о води буквально следующее:
+                «Женщины чюдские все вообще красивы, имеют весёлый, приятный и заманчивый взгляд, быстрые глаза, большие голубые…».
+            </p>
+            <p class="single-text-article">
+                Историк Генрих Габриель Портан также признал, что водские женщины считаются более красивыми по сравнению с русскими и финскими.
+            </p>
+
+
+            <p class="single-text-article">
+                В рукописи Ф. Туманского приводятся такие черты води, как
+                «весьма острый разум, скорое понятие и сильную к войнам охоту»,
+                при этом они «памятуют всегда древность свою и силу...
+                Вспоминают с восхищением, что предки их были бранноохотны и храбры».
+            </p>
+        </article>
+
+
+        <aside class = "aside-article invisible"></aside>
+
+
+
+
+        <article class="article-single">
+
+            <h1 class = "single-text-header-article">
+                Основные занятия
+            </h1>
+
+
+        </article>
+
+
+
+
+
+
+
+
+        <aside class = "aside-article" style="margin-top: 20px">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    Кратко о главном
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        Земледелие - с древних времен основное занятие водского народа
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Рыболовство также занимало видное место, особенно в прибрежных деревнях
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Водские ремесленники славились деревянными изделиями и печами
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                Издавна основным занятием води было земледелие. Во многих погребениях средневековых вожан обнаруже­ны серпы и косы-горбуши.
+            </p>
+            <p class="single-text-article">
+                Из писцовых книг XVI века можно узнать, что на этих землях сеяли рожь, овес и ячмень, лен и коноплю,
+                а с начала XIX века сажали картофель.
+                Пахали сохой «адра», плуг появился лишь с XIX века. Еще в 1940-х годах урожай убирали серпом с зазубренным краем.
+                Хлеб перед молотьбой просуши­вали в риге.
+            </p>
+
+            <p class="single-text-article">
+                Видное место в быту вожан занимало морское рыболовство, причем в тех деревнях,
+                которые были расположены непосредственно на берегу Финского залива,
+                этот промысел получил особенное развитие.
+            </p>
+            <p class="single-text-article">
+                Деревня Валговицы к началу XX века была известна изготовлением деревянной посуды, колес и прялок.
+                Славилась водь и своими печниками: деревни Ильково, Райково и Семейское были населены сплошь мастерами,
+                которые работали в водских и соседних ижорских деревнях.
+            </p>
+            <p class="single-text-article">
+                В деревнях Ивановское и Великино также занимались извозом.
+                Многие жители перепродавали рыбу, ягоды и грибы.
+            </p>
+
+
+            <p class="single-text-article">
+                Жили вожане в многодворных деревнях, в избах восточнославянского типа.
+                Основу пищевого рациона составлял хлеб из ржаной муки, который выпекали в виде высоких круглых караваев.
+                Варили каши из ячменя, из молока делали простоквашу и творог.
+            </p>
+        </article>
+
+
+
+
+        <div class = "main-img-wrapper article-img-single">
+            <div class = "main-img">
+
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="../media/soyma.jpeg" class="slidesImg" alt = "soyma">
+                        <div class="slide-caption">
+                            <a href="http://vatland.ru/toponim/vm/rybolov.php">
+                                <h4>Рыболовецкая сойма</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="../media/gig1.jpg" class="slidesImg" alt = "traditional gig">
+                        <div class="slide-caption">
+                            <a href="http://www.vadjamaa.narod.ru/museum/luutsa.html">
+                                <h4>Двуколка, Лужицы</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="../media/labour.jpg" class="slidesImg" alt = "labour in Kotly">
+                        <div class="slide-caption">
+                            <a href="http://www.vadjamaa.narod.ru/museum/kattila.html">
+                                <h4>Работы в Котлах</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center;  margin: 0 auto 10px">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+    <section class = "single-content section-header" style="margin-top: 30px">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Водский язык
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Избранные сведения о языке вожан
+            </p>
+        </header>
+    </section>
+
+
+
+    <section class = "intermediate" id = "int-middle">
+        <aside class = "int-aside"></aside>
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Свяжитесь с нами</h1>
+            <h2 class = "int-fact">При наличии на Ваш взгляд подходящих материалов для статьи, а также при нахождении<br>
+                неточностей в данном тексте, просим Вас обращаться на почту: <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>
+            </h2>
+        </main>
+
+    </section>
+
+
+
+
+
+
+    <section class = "section-single-main-text section-article-text" style="margin-top: 0">
+
+
+
+
+        <aside class = "aside-article" id="new-history-aside" style="visibility: hidden"></aside>
+
+        <article class="article-single">
+            <h1 class = "single-text-header-article">Общие сведения</h1>
+            <p class = "single-text-article">
+                Водский язык относится к прибалтийско-финской группе уральской семьи языков.
+                По одной из классификаций прибалтийско-финских языков водский язык, вместе с эстонским и ливским образуют южную подгруппу.
+            </p>
+            <p class="single-text-article">
+                В водском языке выделяют западный, восточный, куровицкий и вымерший кревинский диалекты,
+                причем согласно исследованиям Ф. И. Рожанского и Е. Б. Маркус, куровицкий диалект,
+                имеющий ижорскую лексику и фонетику, но водскую грамматику,
+                является итогом неполного перехода носителей водского на ижорский язык
+            </p>
+
+
+
+
+
+        </article>
+
+        <div class = "main-img-wrapper article-img-double">
+            <div class = "main-img-wrapper article-img-left" id="luutsa-left">
+                <div class = "main-img">
+                    <img src="../media/uralic.png" style="width:100%; height:100%" alt="uralic languages">
+                </div>
+                <div class = "main-img-label-left" ><a href="https://ru.wikipedia.org/wiki/Уральские_языки">
+                    <h4>Уральские языки</h4></a>
+                </div>
+            </div>
+
+            <div class = "main-img-wrapper article-img-right" id="luutsa-right">
+                <div class = "main-img">
+                    <img src="../media/related2.png" style="width:100%; height:100%" alt="linguistic relatives">
+                </div>
+                <div class = "main-img-label-right"><a href="https://ru.wikipedia.org/wiki/Водский_язык">
+                    <h4>Водский язык</h4></a>
+                </div>
+            </div>
+        </div>
+
+
+        <aside class = "aside-article invisible"></aside>
+
+        <article class="article-single">
+
+
+
+            <p class = "single-text-article">
+                В настоящее время язык находится под серьёзной угрозой исчезновения
+                и включён в 2009 году ЮНЕСКО в Атлас исчезающих языков мира как
+                «находящийся в критическом состоянии» (англ. critically endangered).
+                В 2010 году водский язык понимали менее 70 человек.
+                Большинство носителей живёт в России, часть — в Эстонии
+            </p>
+
+
+
+            <h1 class = "single-text-header-article" style="line-height: 95%; margin-top: 30px" id = "ling-char">Лингвистическая <br>характеристика</h1>
+
+        </article>
+
+
+        <div class = "main-img-wrapper article-img-single">
+            <div class = "main-img">
+                <img src="../media/alphabet.png" style="width:100%; height:100%" alt="proposed alphabet">
+            </div>
+            <div class = "main-img-label"><a href="https://omniglot.com/writing/votic.htm">
+                <h4>вариант алфавита</h4></a></div>
+        </div>
+
+
+        <aside class = "aside-article">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    Кратко о главном
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        Фонетика водского языка предполагает большой набор гласных и дифтонгов
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Порядок слов в водском языке свободный, но определение стоит перед определяемым словом.
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Лексика восходит к праприбалтийско-финскому языку, включая множество заимствований.
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+
+            <article class="article-single">
+
+
+            <p class="single-text-article">
+                Фонетически водскому языку, наряду с другими прибалто-финскими языками, присущ богатый набор гласных звуков,
+                который делится на гласные переднего ряда (ä, ö, ü, e), заднего ряда (a, o, u, õ), нейтральный i, а также i̮, встречающийся только в русских заимствованиях
+            </p>
+
+            <p class="single-text-article">
+                Кроме того, для водского языка характерен богатый набор дифтонгов (всего 29).
+                Основное ударение ставится на первый слог; дополнительные — на каждом нечётном, начиная с начала слова.
+                Присутствует гармония гласных, однако на гласные i и i̮ гармония не распространяется.
+            </p>
+
+            <p class="single-text-article">
+                В водском языке выделяют следующие части речи: имя существительное, имя прилагательное, имя числительное,
+                местоимение, наречие, глагол, предлог, послелог, союз, частица, междометие.
+                Склоняемые части речи изменяются по четырнадцати падежам.
+            </p>
+            <p class="single-text-article">
+                Как и в других уральских языках, в водском ранее присутствовали притяжательные суффиксы (например, poika «сын» — poikano «ваш сын»),
+                однако в современном языке они уже не употребляются, сохранившись лишь в фольклоре.
+            </p>
+            <p class="single-text-article">
+                Глагол в водском языке обладает следующими категориями: лицо, число, время, наклонение.
+                Категория времени у глагола выражается в форме настоящего, будущего, и трех прошедших времен
+                (собственно прошедшее, перфект, плюсквамперфект)
+            </p>
+            <p class="single-text-article">
+                Порядок слов в водском языке — свободный. Определение ставится перед определяемым словом.
+                Для выражения вопроса используется частица -ko.
+            </p>
+            <p class="single-text-article">
+                Большая часть лексики водского языка восходит к праприбалтийско-финскому языку,
+                включая общие для всех прибалтийско-финских языков заимствования из балтийских, германских и славянских языков.
+                Есть заимствования из ижорского, финского и в особенности русского языков: kormuna «карман», starikka «старик», ďeda «дед».
+            </p>
+            <p class="single-text-article">
+                Согласно лексикостатистическим подсчётам Т. Б. Агранат,
+                в стословном списке Сводеша водского языка 91% совпадений со списком финского литературного языка
+                и 88% совпадений со списком эстонского литературного.
+            </p>
+            </article>
+
+
+        <aside class = "aside-article invisible"></aside>
+            <article class="article-single">
+
+            <h1 class = "single-text-header-article" style="line-height: 95%; margin-top: 30px">История изучения<br>и развитие</h1>
+
+            <p class="single-text-article">
+                В составленном в XVIII веке словаре П. С. Палласа, наряду с лексикой эстонского и карельского языков,
+                представлены слова из «чухонского языка», среди которых вперемешку представлена водская и ижорская лексика.
+            </p>
+
+            <p class="single-text-article">
+                В 1856 году была составлена первая грамматика водского языка «Wotisk grammatik jemte språkprof och ordförteckning» А. Альквиста.
+            </p>
+
+            <p class="single-text-article">
+                В 1922 году лингвистом Д. П. Цветковым, этническим вожанином, была составлена грамматика водского языка
+                (изданная в 2008 году с параллельным переводом на эстонский).
+            </p>
+
+            <p class="single-text-article">
+                В 1948 году была издана грамматика эстонского учёного П. Аристэ «Грамматика водского языка» (эст. Vadja keele grammatika),
+                спустя 20 лет переведённая на английский язык.
+            </p>
+
+
+            <p class="single-text-article">
+                Общепринятой письменности водский язык не имеет и сегодня.
+                В 1930-е годы водский лингвист Дмитрий Цветков разработал алфавит на основе кириллицы
+                по ряду причин не получивший широкого распространения.
+            </p>
+
+
+            </article>
+
+        <div class = "main-img-wrapper article-img-double">
+            <div class = "main-img-wrapper article-img-left" id = "pillovo-left">
+                <div class = "main-img">
+                    <img src="../media/ariste2.png" style="width:100%; height:100%" alt="Ariste the Votic grammar">
+                </div>
+                <div class = "main-img-label-left" ><a href="https://www.routledge.com/A-Grammar-of-the-Votic-Language-1st-Edition/Ariste/p/book/9780700708680">
+                    <h4>Грамматика Аристэ</h4></a>
+                </div>
+            </div>
+
+            <div class = "main-img-wrapper article-img-right" id = "pillovo-right">
+                <div class = "main-img">
+                    <img src="../media/votic-coursebook.png" style="width:100%; height:100%" alt="linguistic relatives">
+                </div>
+                <div class = "main-img-label-right" ><a href="http://old.msu.lenobl.ru/Files/file/posobie_vod.pdf">
+                    <h4>Учебное пособие</h4></a>
+                </div>
+            </div>
+        </div>
+
+
+        <aside class = "aside-article invisible"></aside>
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                В 2014 г. было издано первое «Учебное пособие по водскому языку»
+                (авторы: Конькова О. И. и Дьячков Н. В., редактор — Муслимов М. З.),
+                созданное на основе лужицкого диалекта водского языка.
+            </p>
+
+        </article>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class = "single-content section-header" style="margin-top: 30px">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Традиции води
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Одежда, жилище, фольклор и обряды вожан
+            </p>
+        </header>
+    </section>
+
+
+
+    <section class = "intermediate int2" id = "didyouknow1">
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Знаете ли вы?</h1>
+            <h2 class = "int-fact">Водские традиции сохраняются в исключительно первозданном виде с древних времен<br>
+                Традиционные наряд, жилище и верования за несколько веков изменились не так сильно
+            </h2>
+        </main>
+
+        <aside class = "int-aside"></aside>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section class = "section-single-main-text section-article-text">
+
+
+
+
+        <aside class = "aside-article" style="visibility: hidden"> </aside>
+
+        <article class="article-single">
+            <h1 class = "single-text-header-article">Одежда води</h1>
+            <p class = "single-text-article">
+                Одежда — элемент материальной культуры води, о котором мы имеем наиболее ясное и определенное представление.
+            </p>
+            <p class="single-text-article">
+                Недавно обнаруженные погребения XIII—XVI веков у деревень Великино и Валговицы Кингисеппского района
+                сохранили металлические украшения средневековых вожан — нагрудные булавки,
+                которыми прикалывались к верхней части одежды сложные цепочки с бубенчиками и круглыми ажурными украшениями,
+                многочисленные бляшки, бронзовые пронизки, вплетавшиеся в ткань одежды и порой рядами закрывавшие передники.
+            </p>
+
+
+
+
+
+        </article>
+
+        <div class = "main-img-wrapper article-img-double" >
+            <div class = "main-img-wrapper article-img-left"  id = "clothes1">
+                <div class = "main-img">
+                    <img src="../media/votic-dress.png" style="width:100%; height:100%" alt="Ariste the Votic grammar">
+                </div>
+                <div class = "main-img-label-left" style="width: 270px; transform: translate(90px, -100%)"><a href="https://sitekid.ru/kultura_i_iskusstvo/odezhda/narodnyj_kostyum_ingrii_vod.html">
+                    <h4>Мужской костюм</h4></a>
+                </div>
+            </div>
+
+            <div class = "main-img-wrapper article-img-left"  id = "clothes2">
+                <div class = "main-img">
+                    <img src="../media/votic-dress2.png" style="width:100%; height:100%" alt="Ariste the Votic grammar">
+                </div>
+                <div class = "main-img-label-left" style="width: 270px; transform: translate(0, -100%)"><a href="https://sitekid.ru/kultura_i_iskusstvo/odezhda/narodnyj_kostyum_ingrii_vod.html">
+                    <h4>Женский костюм</h4></a>
+                </div>
+            </div>
+        </div>
+
+
+        <aside class = "aside-article invisible"></aside>
+
+        <article class="article-single">
+
+
+
+            <p class = "single-text-article">
+                Обратимся теперь к XVIII — началу XIX века — именно к этому времени относятся первые этнографические описания водской одежды
+                (данные известного историка И. Г. Георги, нарвского пастора Фр.-Л. Трефурта, пасто­ра Л. А. Цетреуса).
+            </p>
+
+            <p class = "single-text-article">
+                Сведения о мужской одежде води того времени бед­ны: зимой мужчины носили шубы, летом — льняные, осенью — суконные кафтаны.
+                Туманский писал: «Преж­де... имели их мущины особливую им собственную одеж­ду, ныне же одеваются подобно русским крестьянам».
+            </p>
+
+
+
+
+            <p class = "single-text-article">
+                Женской одежде води Туманский уделил особое внимание, отме­чая ее красоту:
+                «Девки и молодки разноцветным сложе­нием гарусу и сукна воображают представить зрению приятнейшую одежду,
+                а оловянными и медньщи ширкунцами (подвесками. — О. К.) составляют для слуху род музыки».
+            </p>
+
+            <p class = "single-text-article">
+                Интересна водская женская одежда и тем, что в ней очень важны были различия по возрастным группам.
+                У соседних народов в XVIII веке таких различий уже почти не было.
+                Выделяются четыре группы водской женской одежды: одежда девушек, молодок, женщин более старшего возраста и старух.
+            </p>
+
+
+
+        </article>
+
+
+        <aside class = "aside-article invisible"></aside>
+        <article class="article-single">
+
+            <h1 class = "single-text-header-article" style="line-height: 95%; margin-top: 30px">Поселение и жилище</h1>
+
+        </article>
+
+
+        <div class = "main-img-wrapper article-img-single">
+
+            <div class = "main-img">
+
+                <img src="../media/threepartedhouse.jpeg" style="width:100%; height:100%" alt="votes today">
+            </div>
+
+
+            <div class = "main-img-label" style="width: 270px"><a href="https://kmn-lo.ru/photos/vod">
+                <h4>водский дом XIX в.</h4></a></div>
+        </div>
+
+
+        <aside class = "aside-article">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    Кратко о главном
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        Издавна водь предпочитает «жить на открытом воздухе и совместно»
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Вероятно древним жилищем води была рига, близкая эстонской
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Дом делился на секции со своими традиционными функциями
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                Водь выбирала для поселения красивые и разнообразные ландшафты — холмы, перемежающиеся долинами с небольшими ручьями.
+                Еще в XVIII веке отмечалось, что водь любит «жить на открытом воздухе и совместно».
+                Эта черта сохранилась и до середины XX ве­ка:
+                дома были поставлены тесно, зачастую деревни не имели строгого плана.
+            </p>
+
+            <p class="single-text-article">
+                Многие исследователи считают, что древним жили­щем води была рига, близкая эстонской, где и жилая комната,
+                и сама рига для просушки хлеба, и хлев нахо­дились под одной крышей.
+                Действительно, еще 100— 200 лет назад водь свой дом называла ригой,
+                а в наши дни водское слово «рихи» означает жилую комнату.
+            </p>
+
+            <p class="single-text-article">
+                В водском доме в прежние времена бытовали свое­образные традиции внутреннего разделения жилого по­мещения,
+                размещения гостей и членов семьи.
+            </p>
+            <p class="single-text-article">
+                Часть комнаты у дверей — место, где происходил как бы отбор гостей;
+                войти дальше в избу без разрешения хозяев ни­кто не мог.
+                Люди «незначительные» оставались там,
+                а родственника или важное лицо приглашали садиться на заднюю скамейку
+                (у стенки напротив входа).
+            </p>
+            <p class="single-text-article">
+                Стол в доме занимал в зависимости от событий различное положение:
+                в будние дни, в дни похорон и поминок он стоял у конца боковой скамейки, которую считали скамейкой умершего;
+                в дни свадеб стол стоял перед задней скамейкой.
+            </p>
+            <p class="single-text-article">
+                В основном за столом ели только мужчины, женщины ели в другом месте, например у очага.
+                Порой ели в три приема: сначала мужчины, потом женщины, следом дети.
+                Иногда дети ели прямо на полу, куда им стелили особую скатерть.
+            </p>
+            <p class="single-text-article">
+                Передний угол избы по диагонали от печи назывался «юмаланурк(а)» («божий угол»).
+                Там располагался особый шкафчик «коло»,
+                в котором хранили иконы, туда же клали пасхальные вербы и яйца,
+                ветки троицыных берез и клочок сена Иванова дня — ими окуривались для выздоровления.
+            </p>
+            <p class="single-text-article">
+                Во время летних праздников в дом приносили расти­тельные украшения.
+                Особую магическую силу придавали можжевельнику, называя его «крестовым» деревом,
+                так как на верхушке каждой шишечки есть крестообразная складка, а крест защищает от всего плохого.
+                В Юрьев день хозяин дома вырывал можжевельник из земли с корнями и подвешивал его на чердаке,
+                что служило защитой от бед и гроз.
+            </p>
+
+
+        </article>
+
+
+
+        <aside class = "aside-article" style="margin-top: 20px">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    Кратко о главном
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        Женитьба вожан была относительно свободной, имел место "пробный брак"
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        На различные особенные случаи вожане призывали колдунов-«арбуев»
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Особо почитаемыми праздниками были дни святого Ильи, святых Флора и Лавра, Иванов и Егорьев дни
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+
+        <article class="article-single">
+
+            <h1 class = "single-text-header-article" style="line-height: 95%; margin-top: 30px">Обычаи и обряды</h1>
+
+            <p class="single-text-article">
+                Наиболее ранние упоминания о семейных обрядах води относятся к первой половине XVI века:
+                в послании архиепископа Феодосия указывается, что у местных народов многие молодые люди держат у себя невест от пяти недель до полугода,
+                «а будет им которая девка или вдова по любви и они де с теми и венчают... а будет не по любви, и они де отсылают их от себя».
+                По-видимому, здесь речь идет о так называемом «пробном» бра­ке, известном в прошлом у некоторых народов Европы.
+            </p>
+
+            <p class="single-text-article">
+                Рождение ребенка обычно происходило в бане.
+                Источники начала XVI века сообщают, что к но­ворожденным детям призывали колдунов-«арбуев»,
+                которые и давали детям имена, и лишь потом несли детей крестить в церковь.
+
+                В XVIII веке народный обряд, со­провождавший крещение, заключался в том, что кум дарил ребенку крест,
+                взамен получая «портки», а отец ребенка дарил крестной матери красные башмаки, та же одаривала деньгами.
+            </p>
+
+            <p class="single-text-article">
+                По историческим сведениям, умирающего клали на солому, которую потом на дворе или улице сжигали,
+                а через этот пепел переносили гроб, хоронить стремились в тот же день.
+                Известно, что и после перехода в христианство водь продолжала хоронить в священных рощах,
+                на кладбищах и в курганах.
+            </p>
+
+            <p class="single-text-article">
+                Верования води впервые упоминаются в источниках XVI века.
+                Объектами поклонения были «лес, и камение, и реки, и блата, и источники, и горы, и холми, солнце, и месяц, и звезды, и езера»
+                им приносились жертвы — волы, овцы и птицы.
+                Отголоски этого почитания сохранились до середины XX века,
+                хотя они порой причудливо переплетались с христианством, особенно с культом святого Ильи,
+                которого водь считала своим особым защитником.
+            </p>
+
+
+
+
+            <p class="single-text-article">
+                Особо почитаемыми народными праздниками во­ди были Егорьев день,
+                Иванов день, дни святого Ильи, святых Флора и Лавра. В день весеннего Егория (23 апреля)
+                — в первый день выгона скота на пастбище — молодые люди разводили на краю деревни костер,
+                играли, танщевали и пели.
+            </p>
+
+            <p class="single-text-article">
+                В ночь Купула (Иванов день) жгли старое колесо, танцевали вокруг огня. Девушки обязательно гадали о замужестве.
+                День святых Флора и Лавра — покровителей скота — водь отмечала подобно русским.
+            </p>
+
+
+            <p class="single-text-article">
+                Значительное место в суевериях води занимали заговоры и магические обряды.
+                Еще в XVI ве­ке в случае болезней людей и животных, при неудачах обращались к жрецам — «арбуям»,
+                в XVIII веке — к кол­дунам— «найта», а в XX веке — к знахарям, знавшим огромное число заговоров.
+            </p>
+
+        </article>
+
+
+
+        <aside class = "aside-article invisible"></aside>
+        <article class="article-single">
+
+            <h1 class = "single-text-header-article" style="line-height: 95%; margin-top: 30px">Народное творчество</h1>
+
+        </article>
+
+
+        <div class = "main-img-wrapper article-img-single" id ="small-wrapper">
+            <div class = "main-img" id = "small-pic">
+
+                <img src="../media/linnut.jpeg" id="small-img" alt="votes today">
+            </div>
+
+
+            <div class = "main-img-label" style="width: 270px; transform: translate(-100px, -100%)"><a href="https://school-kr.kngcit.ru/deyatelnost/vodskij-shkolnyj-ansambl-linnut">
+                <h4>ансамбль Линнут</h4></a></div>
+        </div>
+
+        <br>
+
+
+        <aside class = "aside-article invisible" style="border: 1px solid red">
+        </aside>
+
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                Водский язык никогда не был письменным, но суще­ствовала богатейшая устная традиция.
+                Еще в середине XIX века финские фольклористы открыли на этих зем­лях поистине клад песенной культуры.
+                И хотя об эпической поэзии води данных очень мало,
+                в течение более чем столетия удалось записать немало водских свадебных и лирических песен, причитаний и заговоров.
+            </p>
+
+            <p class="single-text-article">
+                Так, еще Элиас Лённрот, всемирно известный собиратель фольклора и составитель «Калевалы»,
+                только от одной жительницы деревни Котлы узнал 29 свадебных песен.
+            </p>
+
+            <p class="single-text-article">
+                Исполнение песен часто сопровождалось игрой на кантеле — музыкальном инструменте,
+                широко распространенном у многих прибалтийско-финских народов и сходном с русскими гуслями.
+            </p>
+
+
+
+        </article>
+
+
+
+        <div class = "main-img-wrapper article-img-double"  style="margin-bottom: 20px">
+            <div class = "main-img-wrapper article-img-left">
+                <div class = "main-img">
+                    <img src="../media/Elias_Lönnrot.jpg" style="width:100%; height:100%" alt="Ariste the Votic grammar">
+                </div>
+                <div class = "main-img-label-left" ><a href="https://ru.wikipedia.org/wiki/%D0%9B%D1%91%D0%BD%D0%BD%D1%80%D0%BE%D1%82,_%D0%AD%D0%BB%D0%B8%D0%B0%D1%81">
+                    <h4>Элиас Лённрот</h4></a>
+                </div>
+            </div>
+
+            <div class = "main-img-wrapper article-img-right">
+                <div class = "main-img">
+                    <img src="../media/kantele.png" style="width:100%; height:100%" alt="linguistic relatives">
+                </div>
+                <div class = "main-img-label-left"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BD%D1%82%D0%B5%D0%BB%D0%B5">
+                    <h4>Кантеле</h4></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <section class = "intermediate int-final">
+        <aside class = "int-aside"></aside>
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Свяжитесь с нами</h1>
+            <h2 class = "int-fact">При наличии на Ваш взгляд подходящих материалов для статьи, а также при нахождении<br>
+                неточностей в тексте выше, просим Вас обращаться на почту: <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>
+            </h2>
+        </main>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class = "single-content useful-links-article u-l-a-culture">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Дальнейшее чтение
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Источники материалов для данной статьи и другие полезные ресурсы
+            </p>
+        </header>
+
+
+
+
+        <main class="section-single-main-text">
+            <h1 class = "single-text-header">Материалы статьи</h1>
+
+            <p class = "single-text">
+                <a href="https://kmn-lo.ru/vod">Водь на портале коренных народов Ленобласти:</a><br>статья о культуре и истории води
+            </p>
+
+            <p class = "single-text">
+                <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B4%D1%8C">Водь на википедии:</a><br>общая обозревательная статья
+            </p>
+
+            <p class="single-text">
+                <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D1%8F%D0%B7%D1%8B%D0%BA">
+                    Водский язык на википедии:</a><br>разбор лингвистических характеристик; историческая справка
+            </p>
+            <p class="single-text">
+                <a href="http://www.vadjamaa.narod.ru/language/language.html">
+                    Водский язык на основном водском сайте</a><br>ознакомительный обзор
+            </p>
+
+            <p class="single-text">
+                <a href="https://omniglot.com/writing/votic.htm">
+                    Водский язык на сайте omniglot</a><br>ознакомительная статья
+            </p>
+
+            <p class = "single-text">
+                <a href="http://vatland.ru/toponim/vm/rybolov.php">Водский рыболовный промысел:</a><br>статья на новом водском сайте
+            </p>
+
+
+
+            <h1 class = "single-text-header">
+                См. также
+            </h1>
+
+            <p class="single-text">
+                <a href="http://vatland.ru/culture/">Материалы по культуре води:</a>
+                <br>статьи на новом водском сайте
+            </p>
+
+            <p class="single-text">
+                <a href="http://vatland.ru/lang/">Материалы по водскому языку:</a>
+                <br>полезная информация на новом водском сайте
+            </p>
+
+            <p class="single-text">
+                <a href="http://www.finnougoria.ru/prf%20info/samouchitel%20vodskogo%20yazyka1.pdf">В. Чернявский, самоучитель водского языка</a>
+                <br>самоучитель водского на сайте финно-угорского культурного центра
+            </p>
+
+
+            <p class="single-text">
+                <a href="http://www.books.google.com/books/about/A_grammar_of_the_Votic_language.html?id=csoYAQAAIAAJ">П. Аристэ, грамматика водского языка</a>
+                <br>грамматика водского на Google книгах
+            </p>
+
+            <p class="single-text">
+                <a href="https://virtual-votic.webnode.fi/">Сайт по изучению водского языка</a>
+                <br>дальнейшая информация о водском языке, самоучитель
+            </p>
+
+
+
+        </main>
+
+
+
+    </section>
+
+    <section style="height: 20px">
+
+    </section>
+
+</main>
+
+<footer>
+    <div class = "footer_desc">Вадьякко<span> </span>сегодня, <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>, 2020</div>
+</footer>
+
+
+<script src="../index.js"></script>
+
+</body>

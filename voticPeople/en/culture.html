@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Votic people</title>
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100;200;300;400&family=Russo+One&family=Six+Caps&display=swap" rel="stylesheet">
+    <link rel="icon" href="../media/head_icon.png">
+
+    <script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname === this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function() {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+    </script>
+</head>
+<body>
+
+
+<input type="checkbox" id = "expand-toggle">
+
+<ul id = "menu" style="">
+
+    <li><a href = "history.html">History</a></li>
+    <li><a href = "settlements.html">Settlements</a></li>
+    <li><a href = "culture.html">Culture</a></li>
+    <li><a href="contact-us.html" id = "mobile-add">Information</a></li>
+    <li id = "mobile-lang"><a href="../ru/culture.html">RU</a></li>
+    <label for="expand-toggle" id = "menu-closer">
+        &#10799;
+    </label>
+</ul>
+
+
+
+<header>
+    <div class="logo_wrapper">
+        <a href = "index.html">
+            <img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Votic_Flag.svg/1280px-Votic_Flag.svg.png" class="img_logo" alt="west2eats logo1" id = "img_logo1">
+            <h1 id="text_logo">Vađđa<br>today</h1>
+        </a>
+    </div>
+
+
+    <ul class = "topMenuBar">
+        <li><a href = "history.html">History</a></li>
+        <li><a href = "settlements.html">Settlements</a></li>
+        <li><a href = "culture.html">Culture</a></li>
+        <li id = "li_main_menu_add_info"><a id = "div_main_menu_add_text" href="contact-us.html">Information</a></li>
+        <li class="en-menu-open">
+            <label for="expand-toggle" id = "menu-opener">menu
+            </label>
+        </li>
+    </ul>
+
+
+
+
+    <ul class = "changeLanguage">
+        <li class = "li_language"><a id = "lang1" href="../ru/culture.html">RU</a></li>
+        <li class = "li_language"><a id = "lang2">EN</a></li>
+    </ul>
+</header>
+
+
+<main id = "culture-main">
+
+    <section class="main-photo">
+        <img class="img_main_home_pic" src="../media/home_pic0.jpeg" alt="Img for Culture">
+        <h2 class="h2_main_pic_main_text">Votic culture</h2><h2 class="h2_main_pic_main_text" id = "preamble">Language, traditions and more</h2>
+        <div id = "dest"></div>
+        <a id="a_main_home_pic_link" href="#dest">Read more</a>
+    </section>
+
+
+    <section class = "single-content section-header">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                The folk's picture
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Appearance, character traits and lifestyle
+            </p>
+        </header>
+    </section>
+
+
+
+    <section class = "intermediate int2 no-marg">
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header shortened">We recommend<span style="white-space: nowrap"> </span></h1>
+            <h2 class = "int-fact">The article below relies strongly on the portal of Lenoblast indigenous peoples.<br>
+                You can read the original text at: <a href="https://kmn-lo.ru/vod">https://kmn-lo.ru/vod</a>
+            </h2>
+        </main>
+
+        <aside class = "int-aside"></aside>
+    </section>
+
+
+
+    <section class = "section-single-main-text section-article-text">
+
+
+
+
+
+        <aside class = "aside-article invisible"> </aside>
+
+
+        <article class="article-single">
+            <h1 class = "single-text-header-article">Appearance and character</h1>
+
+            <p class = "single-text-article">
+                Votes, along with other Baltic-Finnic peoples, belong to the Eastern Baltic type.
+
+            </p>
+            <p class="single-text-article">
+                The distinctive features of Vađđa include exceptional blond hair:
+                in 80% of men and 76% of women, the hair "was either white as snow or golden-yellow as sand".
+            </p>
+
+
+
+        </article>
+
+
+        <div class = "main-img-wrapper article-img-single">
+            <div class = "main-img">
+
+                <img src="../media/people-today.jpeg" style="width:100%; height:100%" alt="votes today">
+            </div>
+            <div class = "main-img-label" style="width: 270px"><a href="https://www.culture.ru/materials/50925/ischezayushie-narody-rossii-vod">
+                <h4>Votes today</h4></a></div>
+        </div>
+
+
+        <aside class = "aside-article invisible"></aside>
+
+        <article class="article-single"  style="margin-top: 0">
+
+
+            <p class = "single-text-article">
+                In ethnographic literature, Votic women are often credited with an unusually beautiful appearance, as well as a cheerful and pleasant character.
+            </p>
+
+
+
+
+            <p class="single-text-article">
+                At the end of the XVIII century the famous Russian Explorer Fyodor Tumansky wrote about votians literally the following:
+                "Chud women are all generally beautiful, have a cheerful, pleasant and alluring look, quick eyes, big and blue...".
+            </p>
+            <p class="single-text-article">
+                The historian Heinrich Gabriel Portan also recognized that Votic women are considered more beautiful than Russian and Finnish.
+            </p>
+
+
+            <p class="single-text-article">
+                In the manuscript of F. Tumansky, such features of Votes are given as
+                "a very sharp mind, a quick concept, and a strong desire for war»,
+                at the same time, they " always remember their antiquity and strength...
+                They remember with admiration that their ancestors were brave."
+            </p>
+        </article>
+
+
+        <aside class = "aside-article invisible"></aside>
+
+
+
+
+        <article class="article-single">
+
+            <h1 class = "single-text-header-article">
+                Main occupations
+            </h1>
+
+
+        </article>
+
+
+
+
+
+
+
+
+        <aside class = "aside-article" style="margin-top: 20px">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    The main briefly
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        Agriculture has been the main occupation of the Votic people since ancient times.
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Fishing has also been prominent, especially in coastal villages.
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Votic craftsmen used to be famous for wooden products and stoves
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                Since ancient times, the main occupation of Votic has been agriculture. Sickles and spits were found in many burials of medieval Votes.
+            </p>
+            <p class="single-text-article">
+                From the scribal books of the 16th century we can find out that rye, oats and barley, flax and hemp were sown on these lands,
+                potatoes were planted since the beginning of the 19th century as well.
+                Votes plowed wwith plows “Adra”, the plough appeared only from the XIX century. As long as to the 1940s, crops were harvested with a serrated edge.
+                Bread before threshing was dried in special "Rehi" shed building.
+            </p>
+
+            <p class="single-text-article">
+                A prominent place in the life of the Votians was marine fishing, and in those villages
+                which were located directly on the shores of the Gulf of Finland,
+                this fishery was particularly developed.
+            </p>
+            <p class="single-text-article">
+                By the beginning of the 20th century, the village of Valgovitsy was famous for making wooden plates, wheels and spinning wheels.
+                Vađđa was also famous for its stove-makers: the villages of Ilkovo, Raikovo and Semeyskoe were inhabited almost entirely by craftsmen,
+                who worked in Votic and neighboring Izhorian villages.
+            </p>
+            <p class="single-text-article">
+                In the villages of Ivanovskoye and Velikino, they were also engaged in carriage.
+                Many residents resold fish, berries and mushrooms.
+            </p>
+
+
+            <p class="single-text-article">
+                The Votes lived in multi-yard villages, in huts of the East Slavic type.
+                The basis of their diet was bread made from rye flour, which was baked in the form of high round loaves.
+                Cereals were boiled from barley, milk was curdled milk and cottage cheese was made too.
+            </p>
+        </article>
+
+
+
+
+        <div class = "main-img-wrapper article-img-single">
+            <div class = "main-img">
+
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="../media/soyma.jpeg" class="slidesImg" alt = "soyma">
+                        <div class="slide-caption">
+                            <a href="http://vatland.ru/toponim/vm/rybolov.php">
+                                <h4>Fishermen's soyma</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="../media/gig1.jpg" class="slidesImg" alt = "traditional gig">
+                        <div class="slide-caption">
+                            <a href="http://www.vadjamaa.narod.ru/museum/luutsa.html">
+                                <h4>Gig, Luzhitsy</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="../media/labour.jpg" class="slidesImg" alt = "labour in Kotly">
+                        <div class="slide-caption">
+                            <a href="http://www.vadjamaa.narod.ru/museum/kattila.html">
+                                <h4>Plowing in Kotly</h4>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center;  margin: 0 auto 10px">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+    <section class = "single-content section-header" style="margin-top: 30px">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                The Votic language
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Selected information on the language of Vađđa
+            </p>
+        </header>
+    </section>
+
+
+
+    <section class = "intermediate" id = "int-middle">
+        <aside class = "int-aside"></aside>
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Contact us</h1>
+            <h2 class = "int-fact">If you have suitable materials for the article, as well as if some errors<br>
+                are found in the text, please contact us by the email: <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>
+            </h2>
+        </main>
+
+    </section>
+
+
+
+
+
+
+    <section class = "section-single-main-text section-article-text" style="margin-top: 0">
+
+
+
+
+        <aside class = "aside-article" id="new-history-aside" style="visibility: hidden"></aside>
+
+        <article class="article-single">
+            <h1 class = "single-text-header-article">General information</h1>
+            <p class = "single-text-article">
+                The Votic language belongs to the Baltic-Finnish group of the Uralic language family.
+                According to one of the classifications of the Baltic-Finnish languages, the Votic language,
+                together with Estonian and Livian, is form the southern subgroup.
+            </p>
+            <p class="single-text-article">
+                In the Vodsk language, Western, Eastern, Kurovitsky and extinct Krevinsky dialects are distinguished,
+                moreover, according to the research of F. I. Rozhansky and E. B. Markus, the Kurovitsky dialect,
+                having Izhorian vocabulary and phonetics, but Votic grammar,
+                is the result of an incomplete transition of Votic speech to Izhorian.
+            </p>
+
+
+
+
+
+        </article>
+
+        <div class = "main-img-wrapper article-img-double">
+            <div class = "main-img-wrapper article-img-left" id="luutsa-left">
+                <div class = "main-img">
+                    <img src="../media/uralic.png" style="width:100%; height:100%" alt="uralic languages">
+                </div>
+                <div class = "main-img-label-left" ><a href="https://en.wikipedia.org/wiki/Uralic_languages">
+                    <h4>Related languages</h4></a>
+                </div>
+            </div>
+
+            <div class = "main-img-wrapper article-img-right" id="luutsa-right">
+                <div class = "main-img">
+                    <img src="../media/related2.png" style="width:100%; height:100%" alt="linguistic relatives">
+                </div>
+                <div class = "main-img-label-right"><a href="https://en.wikipedia.org/wiki/Finnic_languages">
+                    <h4>Closest relatives</h4></a>
+                </div>
+            </div>
+        </div>
+
+
+        <aside class = "aside-article invisible"></aside>
+
+        <article class="article-single">
+
+
+
+            <p class = "single-text-article">
+                The language is currently in serious danger of extinction.
+                and was included in 2009 by UNESCO in the Atlas of Endangered Languages of the World as
+                “Critically endangered”.
+                In 2010, less than 70 people understood the Votic language.
+                Most speakers live in Russia, some do in Estonia
+            </p>
+
+
+
+            <h1 class = "single-text-header-article" style="line-height: 95%; margin-top: 30px" id = "ling-char">Linguistic <br>characteristics</h1>
+
+        </article>
+
+
+        <div class = "main-img-wrapper article-img-single">
+            <div class = "main-img">
+                <img src="../media/alphabet.png" style="width:100%; height:100%" alt="proposed alphabet">
+            </div>
+            <div class = "main-img-label"><a href="https://omniglot.com/writing/votic.htm">
+                <h4>The alphabet variant</h4></a></div>
+        </div>
+
+
+        <aside class = "aside-article">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    The main briefly
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        Phonetics of the Votic language involves a large set of vowels and diphthongs
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        The word order in the Votic language is free, but the definition stands before the defined word.
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        The vocabulary is based on the pre-Baltic-Finnish language, including many loanwords.
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                Phonetically, the Votic language, along with other Baltic-Finnish languages, has a rich set of vowel sounds,
+                which is divided into vowels of the front row (ä, ö, ü, e), the back row (a, o, u, õ), neutral i, and the i̮ vowel, which is
+                used only in Russian loanwords
+            </p>
+
+            <p class="single-text-article">
+                In addition, the Votic language is characterized by a rich set of diphthongs (29 in total).
+                The main emphasis is placed on the first syllable; additional - on each odd, starting from the beginning of the word.
+                Vowel harmony is present, however, the vowels i and i̮ do not extend harmony.
+            </p>
+
+            <p class="single-text-article">
+                The following parts of speech are distinguished in the Votic language: noun, adjective, numeral,
+                pronoun, adverb, verb, preposition, postposition, union, particle, interjection.
+                The declined parts of speech vary in fourteen cases.
+            </p>
+            <p class="single-text-article">
+                As well as in other Uralic languages, possessive suffixes were previously present in Votic (for example, poika “son” - poikano “your son”),
+                however, in the modern language they are no longer used, preserved only in folklore.
+            </p>
+            <p class="single-text-article">
+                The verb in the Votic language has the following categories: face, number, time, mood.
+                The tense category of the verb is expressed in the form of the present, future, and three past tenses
+                (actual past, perfection, plussquamperfect)
+            </p>
+            <p class="single-text-article">
+                The word order in Vodsky is free. The definition is placed before the defined word.
+                To express the question, the -ko particle is used.
+            </p>
+            <p class="single-text-article">
+                Most of the vocabulary of the Voda language is based on the pre-Baltic-Finnish language,
+                including common for all Baltic-Finnish languages loanwords from Baltic, Germanic and Slavic languages.
+                There are also loanwords from Izhorian, Finnish and especially Russian languages presented: kormuna “pocket”, starikka “old man”, ďeda “grandfather”.
+            </p>
+            <p class="single-text-article">
+                According to lexicostatistical calculations T. B. Agranat,
+                91% coincidence with the list of Finnish literary language
+                and 88% of matches with the list of Estonian literary takes place.
+            </p>
+        </article>
+
+
+        <aside class = "aside-article invisible"></aside>
+        <article class="article-single">
+
+            <h1 class = "single-text-header-article" style="line-height: 95%; margin-top: 30px">Study history<br>and development</h1>
+
+            <p class="single-text-article">
+                In the dictionary compiled in the 18th century by P.S. Pallas, along with vocabulary of the Estonian and Karelian languages,
+                words from the "Chukhon language" are presented, among which the Votic and Izhorian vocabulary are mixed.
+            </p>
+
+            <p class="single-text-article">
+                In 1856 the first Votic grammar was compiled by A. Alkvist's "Votic grammatik jemte språkprof och ordförteckning".
+            </p>
+
+            <p class="single-text-article">
+                In 1922, the linguist D.P. Tsvetkov, a native Votian, compiled a grammar of the Votic language
+                (published in 2008 with a parallel translation into Estonian).
+            </p>
+
+            <p class="single-text-article">
+                In 1948, the grammar of the Estonian scientist P. Ariste “Grammar of the Votic language” (Est. Vadja keele grammatika) was published,
+                20 years later translated into English.
+            </p>
+
+
+            <p class="single-text-article">
+                Votic does not have a generally accepted written language today.
+                In the 1930s, Votic linguist Dmitry Tsvetkov developed the Cyrillic alphabet, however, not widely used
+                for a number of reasons.
+            </p>
+
+
+        </article>
+
+        <div class = "main-img-wrapper article-img-double">
+            <div class = "main-img-wrapper article-img-left" id = "pillovo-left">
+                <div class = "main-img">
+                    <img src="../media/ariste2.png" style="width:100%; height:100%" alt="Ariste the Votic grammar">
+                </div>
+                <div class = "main-img-label-left" ><a href="https://www.routledge.com/A-Grammar-of-the-Votic-Language-1st-Edition/Ariste/p/book/9780700708680">
+                    <h4>Ariste Grammar</h4></a>
+                </div>
+            </div>
+
+            <div class = "main-img-wrapper article-img-right" id = "pillovo-right">
+                <div class = "main-img">
+                    <img src="../media/votic-coursebook.png" style="width:100%; height:100%" alt="linguistic relatives">
+                </div>
+                <div class = "main-img-label-right" ><a href="http://old.msu.lenobl.ru/Files/file/posobie_vod.pdf">
+                    <h4>2014 Textbook</h4></a>
+                </div>
+            </div>
+        </div>
+
+
+        <aside class = "aside-article invisible"></aside>
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                In 2014, the first “Textbook on the Vodka Language” was published
+                (authors: Konkova O. I. and Dyachkov N.V., editor - Muslimov M.Z.),
+                based on the Luzhsky dialect of the Vodsky language.
+            </p>
+
+        </article>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class = "single-content section-header" style="margin-top: 30px">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Тraditions of Vađđa
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Clothing, housing, folklore and rituals of the Votes
+            </p>
+        </header>
+    </section>
+
+
+
+    <section class = "intermediate int2" id = "didyouknow1">
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Did you know?</h1>
+            <h2 class = "int-fact">Votic traditions are preserved in exceptionally well from ancient times.<br>
+                Traditional attire, home, and beliefs have not changed crucially over the centuries.
+            </h2>
+        </main>
+
+        <aside class = "int-aside"></aside>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section class = "section-single-main-text section-article-text">
+
+
+
+
+        <aside class = "aside-article" style="visibility: hidden"> </aside>
+
+        <article class="article-single">
+            <h1 class = "single-text-header-article">The Votic dress</h1>
+            <p class = "single-text-article">
+                Clothing is an element of the material culture of Votes, about which we have the most clear and definite idea.
+            </p>
+            <p class="single-text-article">
+                Recently discovered burials of the XIII-XVI centuries near the villages of Velikino and Valgovitsy, Kingisepp district
+                preserved metal decorations of medieval Votes - chest pins,
+                with which complex chains with bells and round lace ornaments were pinned to the top of the clothes,
+                numerous plaques, bronze piercing, woven into the fabric of clothing and sometimes covering the aprons in rows.
+            </p>
+
+
+
+
+
+        </article>
+
+        <div class = "main-img-wrapper article-img-double" >
+            <div class = "main-img-wrapper article-img-left"  id = "clothes1">
+                <div class = "main-img">
+                    <img src="../media/votic-dress.png" style="width:100%; height:100%" alt="Ariste the Votic grammar">
+                </div>
+                <div class = "main-img-label-left" style="width: 270px; transform: translate(90px, -100%)"><a href="https://sitekid.ru/kultura_i_iskusstvo/odezhda/narodnyj_kostyum_ingrii_vod.html">
+                    <h4>Men's dress</h4></a>
+                </div>
+            </div>
+
+            <div class = "main-img-wrapper article-img-left"  id = "clothes2">
+                <div class = "main-img">
+                    <img src="../media/votic-dress2.png" style="width:100%; height:100%" alt="Ariste the Votic grammar">
+                </div>
+                <div class = "main-img-label-left" style="width: 270px; transform: translate(0, -100%)"><a href="https://sitekid.ru/kultura_i_iskusstvo/odezhda/narodnyj_kostyum_ingrii_vod.html">
+                    <h4>Women's dress</h4></a>
+                </div>
+            </div>
+        </div>
+
+
+        <aside class = "aside-article invisible"></aside>
+
+        <article class="article-single">
+
+
+
+            <p class = "single-text-article">
+                Now let's turn to the XVIII - early XIX century - it was at this time that the first ethnographic descriptions of Votic clothing appeared
+                (data of the famous historian I.G. Georgi, Narva pastor Fr.-L. Trefurt, pastor L.A. Tsetreus).
+            </p>
+
+            <p class = "single-text-article">
+                Information about men's clothing was poor at that time: in winter, men wore fur coats, in summer - linen, in autumn - cloth caftans.
+                Tumansky wrote: "Before ... their men had their own special clothes, now they dress like Russian peasants."
+            </p>
+
+
+
+
+            <p class = "single-text-article">
+                Tumansky paid special attention to women's clothing, noting her beauty:
+                “Girls and young women with colorful cloth make up the most pleasant clothes for sight,
+                and the tin and copper shirkuns (pendants.) make up the kind of music for hearing. ”
+            </p>
+
+            <p class = "single-text-article">
+                Votic women's clothing is also interesting because it was very important for differences in age groups.
+                In the 18th century, neighboring peoples almost no longer had such differences.
+                Four groups of Votic women's clothing are distinguished: clothing of girls, young women, older women and old women.
+            </p>
+
+
+
+        </article>
+
+
+        <aside class = "aside-article invisible"></aside>
+        <article class="article-single">
+
+            <h1 class = "single-text-header-article" style="line-height: 95%; margin-top: 30px">Settlement and housing</h1>
+
+        </article>
+
+
+        <div class = "main-img-wrapper article-img-single">
+
+            <div class = "main-img">
+
+                <img src="../media/threepartedhouse.jpeg" style="width:100%; height:100%" alt="votes today">
+            </div>
+
+
+            <div class = "main-img-label" style="width: 270px"><a href="https://kmn-lo.ru/photos/vod">
+                <h4>votic house, XIX c.</h4></a></div>
+        </div>
+
+
+        <aside class = "aside-article">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    The main briefly
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        From time immemorial, Votes prefer "to live in the open and together"
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Probably an ancient dwelling of Vodi was riga shed, close to Estonian
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        The house was divided into sections with its traditional functions.
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                Vađđa chose beautiful and diverse landscapes for the settlement - hills interspersed with valleys with small streams.
+                As far back as the 18th century it was noted that Votes tend to "live in the open and together."
+                This trait survived until the middle of the 20th century:
+                the houses were crowded, often the villages did not have a strict plan.
+            </p>
+
+            <p class="single-text-article">
+                Many researchers believe that the ancient dwelling of Votes was riga, close to Estonian, where there was a living room,
+                and riga itself for drying bread, and the stable was under one roof.
+                Indeed, as early as 100-200 years ago, votes called the house "riga",
+                and nowadays the Votic word "rihi" means a living room.
+            </p>
+
+            <p class="single-text-article">
+                In the Votic house, in the old days, there were peculiar traditions of the internal division of the living space,
+                accommodating guests and family members.
+            </p>
+            <p class="single-text-article">
+                Part of the room at the door is the place where the selection of guests took place;
+                no one could enter the hut without the permission of the owners.
+                The "insignificant" people stayed there,
+                and a relative or important person was invited to sit on the back bench
+                (by the wall opposite the entrance).
+            </p>
+            <p class="single-text-article">
+                The table in the house occupied a different position depending on the events:
+                on weekdays, on the days of the funeral and commemoration, he stood at the end of the side bench, which was considered the bench of the deceased;
+                on wedding days, the table stood in front of the back bench.
+            </p>
+            <p class="single-text-article">
+                Usually, only men ate at the table, whereas women ate in another place, for example, near the hearth.
+                Sometimes they ate in three stages: first men, then women, followed by children.
+                Sometimes children ate right on the floor, where they laid a special tablecloth.
+            </p>
+            <p class="single-text-article">
+                The front corner of the hut diagonally from the furnace was called “humalanurk” (“God's corner”).
+                There was a special “colo” locker,
+                in which the icons were kept, Easter willows and eggs were laid there with
+                branches of Trinity birches and a scrap of hay on St. Ivan's Day - they were fumigated for recovery.
+            </p>
+            <p class="single-text-article">
+                During the summer holidays, floral decorations were brought into the house.
+                Juniper was believed to have a special magical power, and was called a “cross” tree,
+                since at the top of each cone there is a cruciform fold, and the cross protects against all that is bad.
+                On St. George's Day, the landlord tore the juniper from the ground with roots and hung it in the attic,
+                that served as protection from troubles and thunderstorms.
+            </p>
+
+
+        </article>
+
+
+
+        <aside class = "aside-article" style="margin-top: 20px">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    The main briefly
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        The marriage of the Votes was relatively free, a "trial marriage" took place
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        For various special occasions, the leaders called on the “arbuy” sorcerers
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        Especially revered holidays were the days of St. Elijah, Saints Flora and Laurus, St. Ivan and St. Egor days
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+
+        <article class="article-single">
+
+            <h1 class = "single-text-header-article" style="line-height: 95%; margin-top: 30px">Сustoms and rites</h1>
+
+            <p class="single-text-article">
+                The earliest references to Votic family habits date back to the first half of the 16th century:
+                in the message of Archbishop Theodosius, it is indicated that many young people keep brides from five to six months with local people,
+                "But there will be a girl or widow of love to them, and they will crown them with those ...
+                but will not be of love, and they will send them from themselves."
+                Apparently, here we are talking about the so-called “trial” marriage, known in the past among some peoples of Europe.
+            </p>
+
+            <p class="single-text-article">
+                The birth of a child usually took place in a bathhouse.
+                Sources at the beginning of the 16th century report that “arbuy” sorcerers were called to newborn children,
+                who gave the children names, and only then they carried the children to baptize in church.
+
+                In the XVIII century, the folk rite that accompanied the baptism was that the godfather gave the child a cross,
+                in return, they received “trousers,” and the child’s father gave the godmother red shoes, the same one gave him money.
+            </p>
+
+            <p class="single-text-article">
+                According to historical information, the dying person was put on straw, which was then burned in the yard or street,
+                and through this ashes they carried the coffin; they strove to bury it on the same day.
+                It is known that even after the transition to Christianity, Votes continued to bury in sacred groves,
+                in cemeteries and barrows.
+            </p>
+
+            <p class="single-text-article">
+                Votic beliefs are first mentioned in the sources of the XVI century.
+                The objects of worship were "forest, and stone, and rivers, and crony, and springs,
+                and mountains, and hills, the sun, and the month, and stars, and jezer"
+                they made sacrifices — oxen, sheep, and birds.
+                Echoes of this veneration have survived until the middle of the 20th century,
+                although they are sometimes bizarrely intertwined with Christianity, especially with the cult of St. Elijah,
+                whom Votes considered their special protector.
+            </p>
+
+
+
+
+            <p class="single-text-article">
+                Especially revered national holidays of the vodi were St. Egor (George) Day,
+                Midsummer day, the days of St. Ilya (Elijah), Saints Flora and Laurus. On the day of spring Egoriy (April 23th)
+                - on the first day of cattle pasture on a pasture - young people made a fire on the edge of the village,
+                played, danced and sang.
+            </p>
+
+            <p class="single-text-article">
+                On the night of Kupula (Midsummer Day) they burned the old wheel, danced around the fire. Girls necessarily wondered about marriage.
+                The Day of Saints Flora and Laurus, the patrons of cattle, was celebrated by the Votes is Russian traditions.
+            </p>
+
+
+            <p class="single-text-article">
+                A significant place in the superstitions of the Votes was occupied by conspiracies and magical rites.
+                As far back as the 16th century, in case of diseases of people and animals, in case of failures they turned to priests - “arbuys”,
+                in the XVIII century - to the sorcerers - “naita”, and in the XX century - to the healers, who knew a huge number of conspiracies.
+            </p>
+
+        </article>
+
+
+
+        <aside class = "aside-article invisible"></aside>
+        <article class="article-single">
+
+            <h1 class = "single-text-header-article" style="line-height: 95%; margin-top: 30px">Votic folklore</h1>
+
+        </article>
+
+
+        <div class = "main-img-wrapper article-img-single" id ="small-wrapper">
+            <div class = "main-img" id = "small-pic">
+
+                <img src="../media/linnut.jpeg" id="small-img" alt="votes today">
+            </div>
+
+
+            <div class = "main-img-label" style="width: 270px; transform: translate(-100px, -100%)"><a href="https://school-kr.kngcit.ru/deyatelnost/vodskij-shkolnyj-ansambl-linnut">
+                <h4>Linnut ensemble</h4></a></div>
+        </div>
+
+        <br>
+
+
+        <aside class = "aside-article invisible" style="border: 1px solid red">
+        </aside>
+
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                The Votic language has never been written, but there has always been a rich oral tradition.
+                Back in the middle of the 19th century, Finnish folklorists discovered a treasure of song culture on these lands.
+                And although there is very little data on epic poetry,
+                For more than a century, it was possible to record many Votic wedding and lyric songs, lamentations and conspiracies.
+            </p>
+
+            <p class="single-text-article">
+                For instance, Elias Lönnrot, the world famous collector of folklore and compiler of Kalevala,
+                from only one resident of the village of Kotly learned 29 wedding songs.
+            </p>
+
+            <p class="single-text-article">
+                Songs were often accompanied by playing the kantele, a musical instrument,
+                widespread among many Baltic-Finnish peoples and similar to Russian gusli.
+            </p>
+
+
+
+        </article>
+
+
+
+        <div class = "main-img-wrapper article-img-double"  style="margin-bottom: 20px">
+            <div class = "main-img-wrapper article-img-left">
+                <div class = "main-img">
+                    <img src="../media/Elias_Lönnrot.jpg" style="width:100%; height:100%" alt="Ariste the Votic grammar">
+                </div>
+                <div class = "main-img-label-left" ><a href="https://en.wikipedia.org/wiki/Elias_L%C3%B6nnrot">
+                    <h4>Elias Lönnrot</h4></a>
+                </div>
+            </div>
+
+            <div class = "main-img-wrapper article-img-right">
+                <div class = "main-img">
+                    <img src="../media/kantele.png" style="width:100%; height:100%" alt="linguistic relatives">
+                </div>
+                <div class = "main-img-label-left"><a href="https://en.wikipedia.org/wiki/Kantele">
+                    <h4>Kantele</h4></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <section class = "intermediate int-final">
+        <aside class = "int-aside"></aside>
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Contact us</h1>
+            <h2 class = "int-fact">If you have suitable materials for the article, as well as if some errors<br>
+                are found in the text, please contact us by the email: <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>
+            </h2>
+        </main>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section class = "single-content useful-links-article u-l-a-culture">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Further reading
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Materials for this article and other useful resources
+            </p>
+        </header>
+
+
+
+
+        <main class="section-single-main-text">
+            <h1 class = "single-text-header">The article materials</h1>
+
+            <p class = "single-text">
+                <a href="https://kmn-lo.ru/vod">Votes on Lenoblast indigenous peoples' portal:</a><br>article on Votic culture
+            </p>
+
+            <p class = "single-text">
+                <a href="https://en.wikipedia.org/wiki/Votes">The Votes on wikipedia:</a><br>general review of Votes
+            </p>
+
+            <p class="single-text">
+                <a href="https://en.wikipedia.org/wiki/Votic_language">
+                    The Votic language on wikipedia:</a><br>analysis of linguistic characteristics; historical reference
+            </p>
+            <p class="single-text">
+                <a href="http://www.vadjamaa.narod.ru/language/language.html">
+                    The Votic language on the main Votic site:</a><br>brief review
+            </p>
+
+            <p class="single-text">
+                <a href="https://omniglot.com/writing/votic.htm">
+                    The Votic language on omniglot site:</a><br>brief language review
+            </p>
+
+            <p class = "single-text">
+                <a href="http://vatland.ru/toponim/vm/rybolov.php">The Votic fishing:</a><br>article on the new Votic site
+            </p>
+
+
+
+            <h1 class = "single-text-header">
+                See also
+            </h1>
+
+            <p class="single-text">
+                <a href="http://vatland.ru/culture/">Information on Votic culture:</a>
+                <br>articles on the new Votic site
+            </p>
+
+            <p class="single-text">
+                <a href="http://vatland.ru/lang/">Resourses on the Votic language:</a>
+                <br>useful information on the new Votic site
+            </p>
+
+            <p class="single-text">
+                <a href="http://www.finnougoria.ru/prf%20info/samouchitel%20vodskogo%20yazyka1.pdf">V. Chernyavsky, tutorial in the Votic language:</a>
+                <br>The Votic language tutorial on the site of the Finno-Ugric cultural center
+            </p>
+
+
+            <p class="single-text">
+                <a href="http://www.books.google.com/books/about/A_grammar_of_the_Votic_language.html?id=csoYAQAAIAAJ">P. Ariste, the Votic Grammar:</a>
+                <br>The Votic language grammar on Google Books
+            </p>
+
+            <p class="single-text">
+                <a href="https://virtual-votic.webnode.fi/">The Votic language learning site</a>
+                <br>further information on Votic, tutorials
+            </p>
+
+
+
+        </main>
+
+
+
+    </section>
+
+    <section style="height: 20px">
+
+    </section>
+
+</main>
+
+<footer>
+    <p class = "footer_desc"><span> </span>today, <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>, 2020</p>
+</footer>
+
+
+<script src="../index.js"></script>
+
+</body>
