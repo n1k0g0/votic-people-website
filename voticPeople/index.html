@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Народ Водь</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100;200;300;400&family=Russo+One&family=Six+Caps&display=swap" rel="stylesheet">
+    <link rel="icon" href="media/head_icon.png">
+
+
+    <script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname === this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function() {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+    </script>
+
+</head>
+<body>
+
+
+<input type="checkbox" id = "expand-toggle">
+
+<ul id = "menu" style="">
+
+    <li><a href = "ru/history.html">История</a></li>
+    <li><a href = "ru/settlements.html">Поселения</a></li>
+    <li><a href = "ru/culture.html">Культура</a></li>
+    <li><a href="ru/contact-us.html" id = "mobile-add">Дополнительно</a></li>
+    <li id = "mobile-lang"><a href="en/index.html">EN</a></li>
+    <label for="expand-toggle" id = "menu-closer">
+        &#10799;
+    </label>
+</ul>
+
+
+
+<header>
+
+
+
+
+    <div class="logo_wrapper">
+        <img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Votic_Flag.svg/1280px-Votic_Flag.svg.png" class="img_logo" alt="west2eats logo1" id = "img_logo1">
+        <h1 id="text_logo">Вадьякко<br>сегодня</h1>
+    </div>
+
+    <ul class = "topMenuBar">
+        <li><a href = "ru/history.html">История</a></li>
+        <li><a href = "ru/settlements.html">Поселения</a></li>
+        <li><a href = "ru/culture.html">Культура</a></li>
+        <li id = "li_main_menu_add_info"><a id = "div_main_menu_add_text" href="ru/contact-us.html">Дополнительно</a></li>
+        <li>
+            <label for="expand-toggle" id = "menu-opener" class = "en-menu-open">меню
+            </label>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <ul class = "changeLanguage">
+        <li class = "li_language"><a id = "lang1" href="en/index.html">EN</a></li>
+        <li class = "li_language"><a id = "lang2">RU</a></li>
+    </ul>
+
+
+
+</header>
+
+<main style="margin-bottom: 10px;">
+
+    <section class="main-photo">
+        <img class="img_main_home_pic" src="media/home_pic1.JPG" alt="main_photo">
+        <h2 class="h2_main_pic_main_text">Вадьякко сегодня</h2><h2 class="h2_main_pic_main_text" id = "preamble">маленький народ с большой историей</h2>
+        <div id = "dest"></div>
+        <a id="a_main_home_pic_link" href="#dest">Узнать больше</a>
+    </section>
+
+
+
+
+    <section class = "tiles" id = "content-0" >
+        <header class = "tiles-header" style="margin-bottom: 20px">
+
+            <h2 class="h2_content_header">
+                Народ Водь
+            </h2>
+            <div class = "hr"></div>
+            <p id = "head-caption" class = "section-caption">
+                Водь (ва́ддялайзыд, вадьякко) - древнейшее коренное население Ленинградской области,
+                сегодня компактно проживающее в Кингисеппском районе.
+            </p>
+
+
+        </header>
+
+        <main class="main-tiles">
+            <div class = "tile">
+
+                <section class = "tile-img-wrapper">
+                    <div class = "tile-img">
+                        <a href="ru/history.html"><img src="media/lands.jpg" alt="history" style="height: 100%; width: 100%"></a>
+                    </div>
+                    <div class = "tile-img-label"><h4>История</h4></div>
+                </section>
+                <section class = "tile-text-wrapper">
+                    <h2 class="tile-text-header">История Води</h2>
+                    <div class = "hr"></div>
+                    <p class = "tile-text">
+                        История водского народа начинается в I—IV веках, когда близ деревень Валговицы и Великино
+                        предки современной води оставляют первые археологические следы формирования самобытной культуры
+                    </p>
+                </section>
+                <section class="tile-read-more">
+                    <div class = "tile-read-more-text"><a href="ru/history.html">Читать далее</a></div>
+                    <div class="hr_short"></div>
+                </section>
+            </div>
+
+
+            <div class = "tile">
+                <section class = "tile-img-wrapper">
+                    <div class = "tile-img">
+                        <a href="ru/settlements.html"><img src="media/und6.jpeg" alt="undovo village" style="height: 100%; width: 100%"></a>
+                    </div>
+                    <div class = "tile-img-label"><h4>География</h4></div>
+                </section>
+                <section class = "tile-text-wrapper">
+                    <h2 class="tile-text-header">Поселения вожан</h2>
+                    <div class = "hr"></div>
+                    <p class = "tile-text">
+                        Сегодня народ, давший название Водской пятине Новгородской земли, проживает в основном на севере Кингисеппского района Ленинградской области,
+                        в Санкт-Петербурге, а также на северо-востоке Эстонии
+                    </p>
+                </section>
+                <section class="tile-read-more">
+                    <div class = "tile-read-more-text"><a href="ru/settlements.html">Читать далее</a></div>
+                    <div class="hr_short"></div>
+                </section>
+            </div>
+            <div class = "tile">
+                <section class = "tile-img-wrapper">
+                    <div class = "tile-img">
+                        <a href="ru/culture.html"><img src="media/VOTIOS.jpeg" alt="votes" style="height: 100%; width: 100%"></a></div>
+                    <div class = "tile-img-label"><h4>Культура</h4></div>
+                </section>
+                <section class = "tile-text-wrapper">
+                    <h2 class="tile-text-header">Водские традиции</h2>
+                    <div class = "hr">
+                    </div>
+                    <p class = "tile-text">
+                        Кроме основных занятий, таких как сельское хозяйство и рыбная ловля,
+                        традиционная культура вожан также наполнена древними обычаями, поверьями и музыкой
+                    </p>
+                </section>
+                <section class="tile-read-more">
+                    <div class = "tile-read-more-text"><a href="ru/culture.html">Читать далее</a></div>
+                    <div class="hr_short"></div>
+                </section>
+            </div>
+            <div class = "tile">
+                <section class = "tile-img-wrapper">
+                    <div class = "tile-img">
+                        <a href="ru/contact-us.html"><img src="media/contacts.png" alt="virtual votic museum" style="height: 100%; width: 100%"></a>
+                    </div>
+                    <div class = "tile-img-label"><h4>Контакты</h4></div>
+                </section>
+                <section class = "tile-text-wrapper">
+                    <h2 class="tile-text-header">Полезная информация</h2>
+                    <div class = "hr">
+                    </div>
+                    <p class = "tile-text">
+                        На нашем сайте можно найти информацию для дальнейшего изучения,
+                        а также контакты с редакцией и ссылки на другие полезные ресурсы по теме водской культуры
+                    </p>
+                </section>
+                <section class="tile-read-more">
+                    <div class = "tile-read-more-text"><a href="ru/contact-us.html">Читать далее</a></div>
+                    <div class="hr_short"></div>
+                </section>
+            </div>
+        </main>
+    </section>
+
+
+
+    <section class = "intermediate">
+        <aside class = "int-aside"></aside>
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Знаете ли вы?</h1>
+            <h2 class = "int-fact">Водь считается самым белокурым народом в мире:
+                <br> по приблизительным оценкам, блондинов-вожан 80% среди мужчин и 76% среди женщин</h2>
+        </main>
+    </section>
+
+
+
+    <section class = "single-content" id = "main-page-pic1">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Водский музей
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Посмотреть сайт виртуального водского музея
+            </p>
+        </header>
+
+        <main class = "single-main" id = "museum-single-main">
+
+
+
+            <section class = "main-img-wrapper" id = "museum-wrapper">
+                <div class = "main-img">
+                    <img src="media/museum2.jpeg" alt="votic museum" id = "museum-pic">
+                </div>
+                <div class = "main-img-label"><a href="http://www.vadjamaa.narod.ru"><h4>Перейти на сайт</h4></a></div>
+            </section>
+
+
+
+
+        </main>
+        <footer class = "single-content-footer">
+
+        </footer>
+    </section>
+
+
+
+    <section class = "intermediate int2">
+        <main class = "int-main">
+            <h1 class="int-fact-header">Свяжитесь с нами</h1>
+            <h2 class = "int-fact">По вопросам и предложениям по содержанию сайта пишите по адресу:<br>
+                <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>
+                </h2>
+        </main>
+
+        <aside class = "int-aside"></aside>
+    </section>
+
+
+
+    <section class = "single-content" id = "useful-links">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Полезные ссылки
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Литература по культуре води, изучение языка и много другое
+            </p>
+        </header>
+
+        <main class = "single-main">
+
+
+            <section class="section-single-main-text">
+                <h1 class = "single-text-header">Официальные станицы</h1>
+                <p class = "single-text">
+                    <a href="http://vatland.ru">Новый водский сайт:</a><br>информация о культуре води и главные новости
+                </p>
+                <p class = "single-text">
+                    <a href="http://www.vadjamaa.narod.ru/museum/museum.html">Основной водский сайт:</a><br>этнографическая информация о води
+                </p>
+                <p class="single-text">
+                    <a href="https://www.culture.ru/materials/50925/ischezayushie-narody-rossii-vod">
+                        Страница води на официальном портале культуры России</a>
+                </p>
+
+                <p class="single-text">
+                    <a href="https://vk.com/vadjamaa">Водь ВКонтакте:</a><br>страница "Общество водской культуры"
+                </p>
+
+                <h1 class = "single-text-header">
+                    Изучение культуры
+                </h1>
+                <p class="single-text">
+                    <a href="http://www.vadjamaa.narod.ru/library/library.html">Библиотека официального сайта води:</a>
+                    <br>статьи и учебные материалы
+                </p>
+                <p class="single-text">
+                    <a href="https://kmn-lo.ru/vod">Информация об истории и культуре води</a>
+                    <br>на сайте коренных малочисленых народов Ленинградской области
+                </p>
+                <p class="single-text">
+                    <a href="https://virtual-votic.webnode.fi">Изучение водского языка</a>
+                    <br>(англоязычный сайт)
+                </p>
+            </section>
+
+        </main>
+
+    </section>
+
+    <section style="height: 20px">
+
+    </section>
+
+</main>
+
+<footer>
+    <p class = "footer_desc">Вадьякко<span> </span>сегодня, <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>, 2020</p>
+</footer>
+
+
+
+
+
+
+</body>
+</html>

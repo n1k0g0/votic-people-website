@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Народ Водь</title>
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100;200;300;400&family=Russo+One&family=Six+Caps&display=swap" rel="stylesheet">
+    <link rel="icon" href="../media/head_icon.png">
+
+    <script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname === this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function() {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+    </script>
+
+</head>
+<body>
+
+
+<input type="checkbox" id = "expand-toggle">
+
+<ul id = "menu" style="">
+
+    <li><a href = "history.html">История</a></li>
+    <li><a href = "settlements.html">Поселения</a></li>
+    <li><a href = "culture.html">Культура</a></li>
+    <li><a href="contact-us.html" id = "mobile-add">Дополнительно</a></li>
+    <li id = "mobile-lang"><a href="../en/history.html">EN</a></li>
+    <label for="expand-toggle" id = "menu-closer">
+        &#10799;
+    </label>
+</ul>
+
+
+
+<header>
+    <div class="logo_wrapper">
+        <a href = "../index.html">
+            <img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Votic_Flag.svg/1280px-Votic_Flag.svg.png" class="img_logo" alt="west2eats logo1" id = "img_logo1">
+            <h1 id="text_logo">Вадьякко<br>сегодня</h1>
+        </a>
+    </div>
+
+    <ul class = "topMenuBar">
+        <li><a href = "history.html">История</a></li>
+        <li><a href = "settlements.html">Поселения</a></li>
+        <li><a href = "culture.html">Культура</a></li>
+        <li id = "li_main_menu_add_info"><a id = "div_main_menu_add_text" href="contact-us.html">Дополнительно</a></li>
+        <li>
+            <label for="expand-toggle" id = "menu-opener">меню
+            </label>
+        </li>
+    </ul>
+
+
+
+    <ul class = "changeLanguage">
+        <li class = "li_language"><a id = "lang1" href="../en/history.html">EN</a></li>
+        <li class = "li_language"><a id = "lang2">RU</a></li>
+    </ul>
+</header>
+
+<main id = "history-main">
+
+    <section class="main-photo">
+        <img class="img_main_home_pic" src="../media/old_map.jpeg" alt="People pic">
+        <div>
+            <h2 class="h2_main_pic_main_text">История води</h2><h2 class="h2_main_pic_main_text" id = "preamble">от древних летописей до наших дней</h2>
+        <div id = "dest"></div>
+        <a id="a_main_home_pic_link" href="#dest">Читать далее</a>
+        </div>
+    </section>
+
+
+
+    <section class = "single-content section-header">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                История води
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Обзор основных событий истории водского народа
+            </p>
+        </header>
+    </section>
+
+
+    <section class = "intermediate"  id="aside-history1">
+        <aside class = "int-aside"></aside>
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Знаете ли вы?</h1>
+            <h2 class = "int-fact">Водь считается древнейшим народом Ленинградской области:
+                <br> самые ранние из обнаруженных водских погребений датируются I-IV веками нашей эры</h2>
+        </main>
+    </section>
+
+
+
+
+    <section class = "section-single-main-text section-article-text">
+
+        <aside class = "aside-article">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    Кратко о главном
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        Самые ранние свидетельства водской культуры датируются I-IV веками нашей эры
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        До XII в. водь стремится освободиться от намерения Новгорода распространить на нее дань
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        С XII в. вожане сражаются рука об руку с новгородцами, как в 1149 г. против племени емь
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+        <article class="article-single">
+            <h1 class = "single-text-header-article">Ранняя история</h1>
+            <p class = "single-text-article">
+                    Водь — древнейшее известное племя северо-запада Ленинградской области.
+                    Долгое время считалось, что водь появилась на этих землях лишь в конце I тысячелетия нашей эры
+                    и корни этого народа лежат в Эстонии.
+            </p>
+            <p class="single-text-article">
+                    Однако по последним археологическим данным самые ранние из обнаруженных водских погребений датируются I-IV веками нашей эры.
+                    На каменных погребальных вымостках, расположенных недалеко от деревень Валговицы и Великино,
+                    были обнаружены различные предметы быта предков современных вожан: железные и бронзовый браслеты, нагрудные булавки, топор-кельт, обломки косы-горбуши и фрагменты керамики.
+            </p>
+            <p class = "single-text-article">
+                    Докуметальной хроники о води сохранилось немного. Поскольку водь жила на окраинах новгородских владений,
+                    летописи в основном отмечают только наиболее значительные события — бедствия, войны.
+                    По ним можно представить лишь некоторые стороны жизни средневековых вожан.
+                    Особенно часто водь упоминается при описании военных столкновений, затрагивающих интересы Древнего Новгорода.
+
+            </p>
+            <p class="single-text-article">
+                    Так, Новгородская первая летопись сообщает,
+                    что 23 ок­тября 1069 года при одержании новгородцами победы над полоцким князем Всеславом
+                    (водь выступила на его стороне) «...велика бяше сеця Вожаном, и паде их бещисльное число».
+                    В этом сообщении историки видят стремление води освободиться от намерения Новгорода распространить на нее дань.
+            </p>
+            <p class="single-text-article">
+                    В 1149 году водь при помощи 500 новгородцев истре­била 1000 человек из финского племени емь, напавших на них.
+                    Следует отметить, что, несмотря на взаимную помощь новгородцев и вожан,
+                    усиливающаяся власть Новгорода над водью была довольно суровой.
+                    После нападения немцев на водь в 1240 году и основания ими «города в Копорьи погосте»
+                    Александр Невский уже через год взял Копорское укрепление.
+                    Изменники из вожан и чуди по приказу князя были повешены,
+                    а часть пленных немцев отпущена на свободу.
+            </p>
+
+            </article>
+
+                <div class = "main-img-wrapper article-img-single">
+                    <div class = "main-img">
+                        <img src="../media/fortress.jpeg" style="height: 100%; width: 100%">
+                    </div>
+                    <div class = "main-img-label">
+                        <a href="https://ru.wikipedia.org/wiki/Копорье_(крепость)">
+                            <h4>Крепость Копорье</h4>
+                        </a>
+                    </div>
+                </div>
+
+
+        <aside class = "aside-article invisible">
+        </aside>
+
+            <article class="article-single">
+                <p class="single-text-article">
+                    К XIII веку завершилось включение земли води в состав новгородских владений. В Уставе князя Ярослава «о мостех» (1260-е годы) впервые названа среди 9 основных районов Новгородской земли «Вочьская сотня». В 1270 и 1316 годах вожане  выступили вместе с новгородцами — на сей раз против неугодных им князей.
+                </p>
+
+                <h1 class = "single-text-header-article">
+                    Водь в составе России
+                </h1>
+                <p class="single-text-article">
+                    В 1478 году, когда Новгород был покорен Иваном III и все новгородские владения были разделены на пятины,
+                    одна из пятин стала называться Водской,
+                    хотя ее границы выходили далеко за пределы древней Водской земли, захватывая даже Карелию.
+                </p>
+                <p class="single-text-article">
+                    Переход под власть Новгорода имел следствием принятие водью христианства в форме православия.
+                    В XIII веке Водская пятина уже устойчиво входит в состав Новгородской республики,
+                    а ополчение води входит в состав новгородского.
+                </p>
+                <p class="single-text-article">
+                    Письменные источники не дают точной локализации расселения води.
+                    Первыми источники такого рода являются писцовые книги,
+                    составленные после присоединения Новгорода к Москве (например, Писцовая книга Водской пятины Дмитрия Китаева 7008 года);
+                    однако эти книги были составлены уже после передела новгородских земель московскими властями и могут не соответствовать естественно возникшему укладу.
+                </p>
+                <p class="single-text-article">
+                    Средневековая водь, по мнению многих исследователей, расселялась между Лужской и Ижорской землёй,
+                    причем на западе приближалась к реке Луге, за исключением собственно берега реки.
+                    Видимо, не входило в состав водской пятины и морское побережье от устья Луги до реки Систы,
+                    где средневековые источники помещают чудь.
+                 </p>
+                <p class="single-text-article">
+                    Ассимиляция води славянским (мигрировавшим в ареал её расселения с юга) и ижорским (мигрировало с северо-востока) населением вело к сокращению её численности.
+                    В 1444—1447 годах ливонские рыцари угнали значительную группу води под Бауск (современная Латвия), где потомки переселенцев сохранялись как отдельная этническая группа под названием кревинги до середины XIX века.
+                </p>
+
+            </article>
+
+
+        <div class = "main-img-wrapper article-img-double">
+
+
+            <div class = "main-img-wrapper article-img-left">
+                <div class = "main-img">
+                    <img src="../media/castle.jpg" style="height: 100%; width: 100%">
+                </div>
+                <div class = "main-img-label-left"><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%83%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%BC%D0%BE%D0%BA">
+                    <h4>Бауский замок</h4></a>
+                </div>
+            </div>
+
+            <div class = "main-img-wrapper article-img-right">
+                <div class = "main-img">
+                    <img src="../media/luga.jpg" style="height: 100%; width: 100%">
+                </div>
+                <div class = "main-img-label-right"><a href="https://ru.wikipedia.org/wiki/%D0%9B%D1%83%D0%B3%D0%B0_(%D1%80%D0%B5%D0%BA%D0%B0)">
+                    <h4>Река Луга</h4></a>
+                </div>
+            </div>
+        </div>
+
+        <aside class = "aside-article invisible">
+        </aside>
+
+        <article class="article-single">
+
+
+            <p class="single-text-article">
+                    Переход районов расселения води в 1617 году по условиям Столбовского мира под власть Швеции
+                    вызвал массовый отток местного населения в Россию
+                    (когда эти земли после окончания Северной войны вновь отошли к России, часть переселенцев вернулась назад).
+            </p>
+
+        </article>
+
+
+        <aside class = "aside-article" id="new-history-aside">
+            <div class="brief">
+                <h3 class = "brief-header">
+                    Кратко о главном
+                </h3>
+                <div class = "hr-white"></div>
+                <section>
+                    <div class="brief-fact">
+                        На момент 1926 года перепись зафиксировала 705 представителей води.
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        В ноябре 1943 г. началась эвакуация води в Эстонию, город Палдиски, и затем в Финляндию
+                    </div>
+                    <div class = "hr-short-white"></div>
+                    <div class="brief-fact">
+                        После подписания мирного договора с Финляндией, большая часть води возвращается в СССР, но принудительно расселяется по стране
+                    </div>
+                    <div class = "hr-short-white"></div>
+                </section>
+            </div>
+        </aside>
+
+        <article class="article-single" >
+            <h1 class = "single-text-header-article">Новая история</h1>
+            <p class = "single-text-article">
+                В XIX веке численность водского народа быстро уменьшалась.
+                Как было ранее отмечено, первая перепись 1897 года называет 36 носителей водского языка и 303 — чудского.
+                Но это явная ошибка. В 1919 году в финской литературе сообщалось о 1000 «ватьялайсет»
+                (так финны называли водь).
+            </p>
+            <p class="single-text-article">
+                Перепись 1926 года зафиксировала 705 представителей води.
+                Судя по всему, и эти цифры занижены, о чем будет сказано дальше.
+                Сократилась численность води и в 1930— 1932 годах, и, хотя еще отсутствуют точные данные,
+                все же есть сведения о том, что часть води, жившая в рай­оне Котлов на плодородных землях, дававших прекрас­ные урожаи,
+                была подвергнута принудительному пере­селению в связи с коллективизацией.
+                </p>
+            <p class = "single-text-article">
+                Еще большие по­тери принесла Великая Отечественная война.
+                В прото­коле совещания немцев и финнов в Таллинне 4 ноября 1943 года
+                отдельно обсуждался вопрос об эвакуации в Финляндию вместе с финнами и ижорами также 800 человек води
+                (сравните данные переписи 1926 года).
+                В этом же месяце и началась эвакуация местных финно-язычных народов, сначала в Эстонию,
+                в город Палдиски (в советское время – Балтийск), а затем в Финляндию.
+            </p>
+            <p class="single-text-article">
+                После подписания мирного до­говора с Финляндией большая часть эвакуированной во­ди в 1944 году вернулась в СССР,
+                но сразу же была, как и ижора и ингерманландские финны, принудительно выселена в Псковскую,
+                Новгородскую, Великолуцкую области, затем в Карелию и Сибирь.
+            </p>
+            <p class="single-text-article">
+                в 1956 году было встречено лишь около 25 человек пре­клонного возраста,
+                которые могли свободно говорить на водском языке.
+                В переписи 1959 года водь не упоминается.
+            </p>
+
+
+
+
+            <h1 class = "single-text-header-article">Водь в Российской Федерации</h1>
+
+            <p class="single-text-article">
+                Сегодня водь — самый малочисленный народ Ленобласти и признан исчезающим народом России.
+                По данным последней переписи, вожан — 64 человека.
+                Большая часть живет в Ленинградской области — деревнях Лужицы, Котлы и Краколье в Усть-Луге, Сосновом Бору.
+                Есть вожане также в Петербурге и Эстонии.
+                Силами вожан и волонтеров проводятся работы по сохранению культуры води.
+            </p>
+
+            <p class="single-text-article">
+                В 1997 году был создан первый Водский музей в деревне Лужицы.
+                В музее силами Т. Ефимовой и других жителей деревни было собрано 70 экспонатов
+                и более 200 фотографий довоенного периода. На базе музея была начата работа по сбору этнографического материала,
+                сбор и систематизация сведений, собранных в различных архивах, в том числе сведения по генеалогии водских семей и пр.
+                С 2000 года проводится ежегодный праздник в деревне Лужицы «Luutsa vakkavõ» — «Лужицкая складчина».
+            </p>
+
+            <p class="single-text-article">
+                13 октября 2008 г. постановлением правительства Российской Федерации «О внесении изменений в Единый перечень коренных малочисленных народов Российской Федерации»
+                водь внесена в Единый перечень коренных малочисленных народов Российской Федерации.
+            </p>
+
+        </article>
+
+
+    </section>
+
+
+    <section class = "intermediate int2" id = "int-history-final">
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Знаете ли вы?</h1>
+            <h2 class = "int-fact">Водь является самым малочисленным народом, проживающим в России:<br>
+                по переписи 2010г. в РФ всего 64 вожанина, а также в Эстонии 9 вожан по переписи 2000г.
+            </h2>
+        </main>
+
+        <aside class = "int-aside"></aside>
+    </section>
+
+    <section class = "single-content useful-links-article">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Дальнейшее чтение
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Источники материалов для данной статьи и другие полезные ресурсы
+            </p>
+        </header>
+
+
+
+
+            <main class="section-single-main-text">
+                <h1 class = "single-text-header">Материалы статьи</h1>
+                <p class = "single-text">
+                    <a href="http://vatland.ru">Новый водский сайт:</a><br>исторические детали и факты
+                </p>
+                <p class = "single-text">
+                    <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B4%D1%8C">Водь на википедии:</a><br>краткая историческая справка
+                </p>
+                <p class="single-text">
+                    <a href="https://kmn-lo.ru/vod">
+                        Водь портале коренных народов Ленобласти:</a><br>статья по истории води
+                </p>
+
+
+
+                <h1 class = "single-text-header">
+                    См. также
+                </h1>
+                <p class="single-text">
+                    <a href="http://vatland.ru/history/">История води на новом водском сайте:</a>
+                    <br>история изучения, история деревни Лужицы и пр.
+                </p>
+                <p class="single-text">
+                    <a href="https://www.culture.ru/materials/50925/ischezayushie-narody-rossii-vod">Водь на портале КУЛЬТУРА.РФ</a>
+                    <br>статья посвященная води
+                </p>
+
+            </main>
+
+
+
+    </section>
+
+
+    <section style="height: 20px">
+
+    </section>
+
+</main>
+
+<footer class="the-footer">
+    <p class = "footer_desc">Вадьякко<span> </span>сегодня, <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>, 2020</p>
+</footer>
+
+</body>
+</html>

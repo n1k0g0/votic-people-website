@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Votic People</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100;200;300;400&family=Russo+One&family=Six+Caps&display=swap" rel="stylesheet">
+    <link rel="icon" href="../media/head_icon.png">
+
+
+    <script>
+        // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function(event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname === this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function() {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+    </script>
+
+</head>
+<body>
+
+
+<input type="checkbox" id = "expand-toggle">
+
+<ul id = "menu" style="">
+
+    <li><a href = "history.html">History</a></li>
+    <li><a href = "settlements.html">Settlements</a></li>
+    <li><a href = "culture.html">Culture</a></li>
+    <li><a href="contact-us.html" id = "mobile-add">Details</a></li>
+    <li id = "mobile-lang"><a href="../index.html">RU</a></li>
+    <label for="expand-toggle" id = "menu-closer">
+        &#10799;
+    </label>
+</ul>
+
+
+
+<header>
+
+
+
+
+    <div class="logo_wrapper">
+        <img src= "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Votic_Flag.svg/1280px-Votic_Flag.svg.png" class="img_logo" alt="west2eats logo1" id = "img_logo1">
+        <h1 id="text_logo">Vađđa<br>today</h1>
+    </div>
+
+    <ul class = "topMenuBar">
+        <li><a href = "history.html">History</a></li>
+        <li><a href = "settlements.html">Settlements</a></li>
+        <li><a href = "culture.html">Culture</a></li>
+        <li id = "li_main_menu_add_info"><a id = "div_main_menu_add_text" href="contact-us.html">Information</a></li>
+        <li class="en-menu-open">
+            <label for="expand-toggle" id = "menu-opener">menu
+            </label>
+        </li>
+    </ul>
+
+
+
+
+
+    <ul class = "changeLanguage">
+        <li class = "li_language"><a id = "lang1" href="../index.html">RU</a></li>
+        <li class = "li_language"><a id = "lang2">EN</a></li>
+    </ul>
+
+
+
+</header>
+
+<main style="margin-bottom: 10px;">
+
+    <section class="main-photo">
+        <img class="img_main_home_pic" src="../media/home_pic1.JPG" alt="main_photo">
+        <h2 class="h2_main_pic_main_text">Vađđa today</h2><h2 class="h2_main_pic_main_text" id = "preamble">Small folk of great history</h2>
+        <div id = "dest"></div>
+        <a id="a_main_home_pic_link" href="#dest">Learn more</a>
+    </section>
+
+
+
+
+    <section class = "tiles" id = "content-0" >
+        <header class = "tiles-header" style="margin-bottom: 20px">
+
+            <h2 class="h2_content_header">
+                The Votic people
+            </h2>
+            <div class = "hr"></div>
+            <p id = "head-caption" class = "section-caption">
+                Votes (vađđa, vods) are the oldest indigenous people of the Leningrad region,
+                today compactly living in the Kingisepp district.
+            </p>
+
+
+        </header>
+
+        <main class="main-tiles">
+            <div class = "tile">
+
+                <section class = "tile-img-wrapper">
+                    <div class = "tile-img">
+                        <a href="history.html"><img src="../media/lands.jpg" alt="history" style="height: 100%; width: 100%"></a>
+                    </div>
+                    <div class = "tile-img-label"><h4>History</h4></div>
+                </section>
+                <section class = "tile-text-wrapper">
+                    <h2 class="tile-text-header">Votes' history</h2>
+                    <div class = "hr"></div>
+                    <p class = "tile-text">
+                        The history of the Votic people began in the I—IV centuries, when near the villages of Valgovitsy and Velikino
+                        the ancestors of modern vods left the first archaeological traces of the formation of an original culture
+                    </p>
+                </section>
+                <section class="tile-read-more">
+                    <div class = "tile-read-more-text"><a href="history.html">Read more</a></div>
+                    <div class="hr_short"></div>
+                </section>
+            </div>
+
+
+            <div class = "tile">
+                <section class = "tile-img-wrapper">
+                    <div class = "tile-img">
+                        <a href="settlements.html"><img src="../media/und6.jpeg" alt="undovo village" style="height: 100%; width: 100%"></a>
+                    </div>
+                    <div class = "tile-img-label"><h4>Geography</h4></div>
+                </section>
+                <section class = "tile-text-wrapper">
+                    <h2 class="tile-text-header">Vods' settlements</h2>
+                    <div class = "hr"></div>
+                    <p class = "tile-text">
+                        Today, the people once given the name to the vods Pyatina of Novgorod land live mainly in the North of the Kingisepp district of the Leningrad region,
+                        in Saint Petersburg, as well as in the North-East of Estonia
+                    </p>
+                </section>
+                <section class="tile-read-more">
+                    <div class = "tile-read-more-text"><a href="settlements.html">Read more</a></div>
+                    <div class="hr_short"></div>
+                </section>
+            </div>
+            <div class = "tile">
+                <section class = "tile-img-wrapper">
+                    <div class = "tile-img">
+                        <a href="culture.html"><img src="../media/VOTIOS.jpeg" alt="votes" style="height: 100%; width: 100%"></a></div>
+                    <div class = "tile-img-label"><h4>Culture</h4></div>
+                </section>
+                <section class = "tile-text-wrapper">
+                    <h2 class="tile-text-header">Votic traditions</h2>
+                    <div class = "hr">
+                    </div>
+                    <p class = "tile-text">
+                        Apart from basic activities such as farming and fishing,
+                        the traditional culture of vađđa is also filled with ancient customs, beliefs and music
+                    </p>
+                </section>
+                <section class="tile-read-more">
+                    <div class = "tile-read-more-text"><a href="culture.html">Read more</a></div>
+                    <div class="hr_short"></div>
+                </section>
+            </div>
+            <div class = "tile">
+                <section class = "tile-img-wrapper">
+                    <div class = "tile-img">
+                        <a href="contact-us.html"><img src="../media/contacts.png" alt="virtual votic museum" style="height: 100%; width: 100%"></a>
+                    </div>
+                    <div class = "tile-img-label"><h4>Contacts</h4></div>
+                </section>
+                <section class = "tile-text-wrapper">
+                    <h2 class="tile-text-header">Useful information</h2>
+                    <div class = "hr">
+                    </div>
+                    <p class = "tile-text">
+                        On our website you can find information for further study,
+                        as well as our contacts and links to other useful resources on the topic of Votic culture
+                    </p>
+                </section>
+                <section class="tile-read-more">
+                    <div class = "tile-read-more-text"><a href="contact-us.html">Read more</a></div>
+                    <div class="hr_short"></div>
+                </section>
+            </div>
+        </main>
+    </section>
+
+
+
+    <section class = "intermediate">
+        <aside class = "int-aside"></aside>
+        <main class = "int-main int-extended">
+            <h1 class="int-fact-header">Did you know?</h1>
+            <h2 class = "int-fact">Votes are considered the most blond people in the world:
+                <br>according to rough estimates, 80% of Votic men and 76% of Votic women are blond</h2>
+        </main>
+    </section>
+
+
+
+    <section class = "single-content" id = "main-page-pic1">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                The Votic museum
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Visit the Votic museum's official page
+            </p>
+        </header>
+
+        <main class = "single-main" id = "museum-single-main">
+
+
+
+            <section class = "main-img-wrapper" id = "museum-wrapper">
+                <div class = "main-img">
+                    <img src="../media/museum2.jpeg" alt="votic museum" id = "museum-pic">
+                </div>
+                <div class = "main-img-label"><a href="http://www.vadjamaa.narod.ru/index_eng.html"><h4>Go to the site</h4></a></div>
+            </section>
+
+
+
+
+        </main>
+        <footer class = "single-content-footer">
+
+        </footer>
+    </section>
+
+
+
+    <section class = "intermediate int2">
+        <main class = "int-main">
+            <h1 class="int-fact-header">Contact us</h1>
+            <h2 class = "int-fact">If you have any questions or suggestions about the site's content, please contact us at:<br>
+                <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>
+            </h2>
+        </main>
+
+        <aside class = "int-aside"></aside>
+    </section>
+
+
+
+    <section class = "single-content" id = "useful-links">
+        <header class = "single-content-header">
+            <h2 class="h2_content_header">
+                Useful links
+            </h2>
+            <div class = "hr"></div>
+            <p class = "section-caption">
+                Literature on the Votic culture, language learning, and more
+            </p>
+        </header>
+
+        <main class = "single-main">
+
+
+            <section class="section-single-main-text">
+                <h1 class = "single-text-header">Official sites</h1>
+                <p class = "single-text">
+                    <a href="http://vatland.ru">The new Votic site:</a><br>information upon the Votic culture and news
+                </p>
+                <p class = "single-text">
+                    <a href="http://www.vadjamaa.narod.ru/index_eng.html">The main Votic site</a><br>ethnographic information about Vađđa
+                </p>
+                <p class="single-text">
+                    <a href="https://www.culture.ru/materials/50925/ischezayushie-narody-rossii-vod">
+                        Votic page on the official portal of culture of Russia</a>
+                </p>
+
+                <p class="single-text">
+                    <a href="https://vk.com/vadjamaa">Votes on VK platform</a><br>"Votic Culture Community" page
+                </p>
+
+                <h1 class = "single-text-header">
+                    Culture studying
+                </h1>
+                <p class="single-text">
+                    <a href="http://www.vadjamaa.narod.ru/library/library.html">The online library of the main Votic site:</a>
+                    <br>articles and educational materials
+                </p>
+                <p class="single-text">
+                    <a href="https://kmn-lo.ru/vod">The indigenous peoples of the Leningrad region website</a>
+                    <br>Information upon history and culture of Votes
+                </p>
+                <p class="single-text">
+                    <a href="https://virtual-votic.webnode.fi">Learn the Votic language</a>
+                    <br>(only for English-speakers)
+                </p>
+            </section>
+
+        </main>
+
+    </section>
+
+    <section style="height: 20px">
+
+    </section>
+
+</main>
+
+<footer>
+    <p class = "footer_desc">Vađđa<span> </span>today, <a href="mailto:n1kg0r.purview@yahoo.com">n1kg0r.purview@yahoo.com</a>, 2020</p>
+</footer>
+
+
+
+
+
+
+</body>
+</html>
